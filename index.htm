@@ -1,0 +1,256 @@
+<!doctype html>
+<html lang="ka">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="STEPANYAN IT GROUP — დისტანციური ვებ-დეველოპმენტი და ციფრული სერვისები. პატარა ბიზნესის ვებგვერდი 10 ლარიდან.">
+  <meta name="theme-color" content="#0b1f24">
+  <title>STEPANYAN IT GROUP — Digital Web Studio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Georgian:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header" id="top">
+    <div class="container nav-wrap">
+      <a class="brand" href="#home" aria-label="STEPANYAN IT GROUP home">
+        <span class="brand-mark">S</span>
+        <span>
+          <strong>STEPANYAN</strong>
+          <small>IT GROUP</small>
+        </span>
+      </a>
+
+      <nav class="desktop-nav" aria-label="Main navigation">
+        <a href="#home" data-i18n="nav_home">მთავარი</a>
+        <a href="#services" data-i18n="nav_services">სერვისები</a>
+        <a href="#portfolio" data-i18n="nav_portfolio">პორტფოლიო</a>
+        <a href="#about" data-i18n="nav_about">ჩვენს შესახებ</a>
+        <a href="#contact" data-i18n="nav_contact">კონტაქტი</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="icon-btn" id="themeBtn" type="button" aria-label="Toggle theme">☾</button>
+        <select id="language" class="language-select" aria-label="Language">
+          <option value="ka">KA</option>
+          <option value="en">EN</option>
+          <option value="hy">HY</option>
+          <option value="ru">RU</option>
+        </select>
+        <button class="menu-btn" id="menuBtn" type="button" aria-label="Open menu">☰</button>
+      </div>
+    </div>
+
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="#home" data-i18n="nav_home">მთავარი</a>
+      <a href="#services" data-i18n="nav_services">სერვისები</a>
+      <a href="#portfolio" data-i18n="nav_portfolio">პორტფოლიო</a>
+      <a href="#about" data-i18n="nav_about">ჩვენს შესახებ</a>
+      <a href="#contact" data-i18n="nav_contact">კონტაქტი</a>
+    </div>
+  </header>
+
+  <main id="home">
+    <section class="hero">
+      <div class="hero-glow"></div>
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <div class="eyebrow"><span></span><span data-i18n="eyebrow">REMOTE DIGITAL STUDIO</span></div>
+          <h1 data-i18n="hero_title">თქვენი პატარა ბიზნესი<br><em>ონლაინ იწყება.</em></h1>
+          <p data-i18n="hero_text">STEPANYAN IT GROUP ქმნის მარტივ, თანამედროვე და მობილურზე მორგებულ ვებგვერდებს მცირე ბიზნესებისთვის.</p>
+
+          <div class="price-badge">
+            <span data-i18n="price_label">პატარა ვებგვერდი</span>
+            <strong>10 ₾</strong>
+            <small data-i18n="price_from">დან</small>
+          </div>
+
+          <div class="hero-buttons">
+            <a class="btn btn-primary" href="#contact" data-i18n="hero_cta">დაწყება →</a>
+            <a class="btn btn-ghost" href="#portfolio" data-i18n="hero_portfolio">ნამუშევრები</a>
+          </div>
+
+          <div class="trust-row">
+            <div><strong>100%</strong><span data-i18n="trust_remote">დისტანციური</span></div>
+            <div><strong>24/7</strong><span data-i18n="trust_online">ონლაინ კომუნიკაცია</span></div>
+            <div><strong>2026</strong><span data-i18n="trust_year">პირველი ეტაპი</span></div>
+          </div>
+        </div>
+
+        <div class="hero-card-wrap">
+          <div class="orbit orbit-1"></div>
+          <div class="orbit orbit-2"></div>
+          <div class="code-card">
+            <div class="code-top"><span></span><span></span><span></span><b>stepanyan.dev</b></div>
+            <div class="code-body">
+              <div><i>01</i><span class="pink">&lt;section</span> <span class="gold">class</span>=<span class="green">"business"</span><span class="pink">&gt;</span></div>
+              <div><i>02</i>&nbsp;&nbsp;<span class="blue">YOUR BUSINESS</span></div>
+              <div><i>03</i>&nbsp;&nbsp;<span class="muted">beautifully online.</span></div>
+              <div><i>04</i><span class="pink">&lt;/section&gt;</span></div>
+              <div class="code-cursor">▌</div>
+            </div>
+            <div class="code-status"><span class="status-dot"></span><span data-i18n="code_status">საიტი მზადაა</span><b>100%</b></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section services" id="services">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <div class="eyebrow"><span></span><span data-i18n="services_eyebrow">WHAT WE DO</span></div>
+            <h2 data-i18n="services_title">ციფრული სერვისები</h2>
+          </div>
+          <p data-i18n="services_intro">ვიწყებთ მარტივად და ვზრდით პროექტს თქვენი საჭიროების მიხედვით.</p>
+        </div>
+
+        <div class="service-grid">
+          <article class="service-card featured">
+            <div class="service-icon">⌁</div>
+            <span class="service-number">01</span>
+            <h3 data-i18n="s1_title">მინი ვებგვერდი</h3>
+            <p data-i18n="s1_text">ერთი გვერდის თანამედროვე საიტი კონტაქტით, სერვისებით და თქვენი ბიზნესის ინფორმაციით.</p>
+            <strong>10 ₾ <small data-i18n="from">დან</small></strong>
+          </article>
+
+          <article class="service-card">
+            <div class="service-icon">◈</div>
+            <span class="service-number">02</span>
+            <h3 data-i18n="s2_title">ბიზნეს ვებგვერდი</h3>
+            <p data-i18n="s2_text">მრავალსექციური საიტი პორტფოლიოთი, პროდუქტებით, კონტაქტით და მობილური დიზაინით.</p>
+            <strong data-i18n="s2_price">ფასი შეთანხმებით</strong>
+          </article>
+
+          <article class="service-card">
+            <div class="service-icon">✦</div>
+            <span class="service-number">03</span>
+            <h3 data-i18n="s3_title">AI & Digital</h3>
+            <p data-i18n="s3_text">AI ინსტრუმენტების გამოყენება ტექსტის, ვიზუალების და ციფრული სამუშაო პროცესების გასამარტივებლად.</p>
+            <strong data-i18n="s3_price">ინდივიდუალურად</strong>
+          </article>
+
+          <article class="service-card">
+            <div class="service-icon">↻</div>
+            <span class="service-number">04</span>
+            <h3 data-i18n="s4_title">მხარდაჭერა</h3>
+            <p data-i18n="s4_text">არსებულ საიტზე მცირე ცვლილებები, ტექსტის განახლება, დიზაინის კორექტირება და ტექნიკური დახმარება.</p>
+            <strong data-i18n="s4_price">შეთანხმებით</strong>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section portfolio" id="portfolio">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <div class="eyebrow"><span></span><span data-i18n="portfolio_eyebrow">SELECTED PROJECT</span></div>
+            <h2 data-i18n="portfolio_title">პირველი ნამუშევარი</h2>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-preview">
+            <div class="mini-browser">
+              <div class="browser-bar"><span></span><span></span><span></span></div>
+              <div class="mini-site">
+                <div class="mini-nav"><b>MINI MARKET</b><span>🛒</span></div>
+                <div class="mini-search"></div>
+                <div class="mini-products"><i></i><i></i><i></i></div>
+                <div class="mini-footer"></div>
+              </div>
+            </div>
+          </div>
+          <div class="project-info">
+            <span class="tag" data-i18n="project_tag">LIVE PROJECT</span>
+            <h3>MINI MARKET</h3>
+            <p data-i18n="project_text">მცირე მაღაზიისთვის შექმნილი თანამედროვე ვებგვერდი პროდუქტის ძიებით, კატეგორიებით, კალათით და საკონტაქტო ფუნქციებით.</p>
+            <div class="project-tech"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>Web3Forms</span></div>
+            <a class="btn btn-primary" href="#contact" data-i18n="project_cta">მსგავსი საიტი მინდა →</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section about" id="about">
+      <div class="container about-grid">
+        <div>
+          <div class="eyebrow"><span></span><span data-i18n="about_eyebrow">ABOUT THE GROUP</span></div>
+          <h2 data-i18n="about_title">პატარა გუნდი.<br><em>ციფრული მისამართი.</em></h2>
+        </div>
+        <div class="about-copy">
+          <p data-i18n="about_text">STEPANYAN IT GROUP არის მცირე, დისტანციური ციფრული ინიციატივა. ჩვენ არ გვაქვს ფიზიკური ოფისი — ვმუშაობთ ონლაინ და კლიენტთან კომუნიკაციას დისტანციურად ვაწარმოებთ.</p>
+          <p data-i18n="about_text2">ამ ეტაპზე ვაგროვებთ გამოცდილებას რეალურ მცირე პროექტებზე, ამიტომ საწყისი ფასები დაბალია. მიზანია ხარისხიანი პირველი ნაბიჯი მათთვის, ვისაც დიდი ბიუჯეტის გარეშე სურს საკუთარი ციფრული სივრცე.</p>
+          <div class="facts">
+            <div><b>REMOTE</b><span data-i18n="fact1">ფიზიკური ოფისის გარეშე</span></div>
+            <div><b>ONLINE</b><span data-i18n="fact2">დისტანციური კომუნიკაცია</span></div>
+            <div><b>10 ₾</b><span data-i18n="fact3">საწყისი მინი-საიტი</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section contact" id="contact">
+      <div class="container contact-box">
+        <div class="contact-copy">
+          <div class="eyebrow"><span></span><span data-i18n="contact_eyebrow">START A PROJECT</span></div>
+          <h2 data-i18n="contact_title">მოდი, შენი იდეა<br><em>ონლაინ გავუშვათ.</em></h2>
+          <p data-i18n="contact_text">მოგვწერე რა ტიპის საიტი გჭირდება. ფორმის გაგზავნის შემდეგ WhatsApp-ში ავტომატურად გაიხსნება მომზადებული შეტყობინება.</p>
+          <div class="contact-links">
+            <a href="https://wa.me/995500224822" target="_blank" rel="noopener">WhatsApp <span>↗</span></a>
+            <a href="tel:+995500224822">+995 500 22 48 22 <span>↗</span></a>
+          </div>
+        </div>
+
+        <form class="contact-form" id="contactForm">
+          <label><span data-i18n="form_name">სახელი</span><input id="name" required placeholder="თქვენი სახელი"></label>
+          <label><span data-i18n="form_type">საიტის ტიპი</span>
+            <select id="type" required>
+              <option value="" data-i18n="form_choose">აირჩიეთ...</option>
+              <option value="Mini website" data-i18n="opt_mini">მინი ვებგვერდი — 10 ₾-დან</option>
+              <option value="Business website" data-i18n="opt_business">ბიზნეს ვებგვერდი</option>
+              <option value="Other" data-i18n="opt_other">სხვა</option>
+            </select>
+          </label>
+          <label><span data-i18n="form_message">მოკლე აღწერა</span><textarea id="message" rows="4" required placeholder="რა გჭირდებათ?"></textarea></label>
+          <button class="btn btn-primary full" type="submit" data-i18n="form_send">WhatsApp-ზე გაგზავნა →</button>
+          <p class="form-note" data-i18n="form_note">ფორმა არ აგროვებს მონაცემებს ჩვენს სერვერზე — შეტყობინება იხსნება თქვენს WhatsApp-ში.</p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <div class="brand">
+          <span class="brand-mark">S</span>
+          <span><strong>STEPANYAN</strong><small>IT GROUP</small></span>
+        </div>
+        <p data-i18n="footer_text">Remote digital studio for small businesses.</p>
+      </div>
+      <div>
+        <h4 data-i18n="footer_nav">ნავიგაცია</h4>
+        <a href="#services" data-i18n="nav_services">სერვისები</a>
+        <a href="#portfolio" data-i18n="nav_portfolio">პორტფოლიო</a>
+        <a href="#contact" data-i18n="nav_contact">კონტაქტი</a>
+      </div>
+      <div>
+        <h4 data-i18n="footer_contact">კონტაქტი</h4>
+        <a href="https://wa.me/995500224822" target="_blank" rel="noopener">WhatsApp</a>
+        <a href="tel:+995500224822">+995 500 22 48 22</a>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <span>© <span id="year"></span> STEPANYAN IT GROUP</span>
+      <span data-i18n="footer_remote">REMOTE • DIGITAL • ONLINE</span>
+    </div>
+  </footer>
+
+  <a class="back-top" href="#top" aria-label="Back to top">↑</a>
+  <div class="toast" id="toast" role="status"></div>
+  <script src="script.js"></script>
+</body>
+</html>
