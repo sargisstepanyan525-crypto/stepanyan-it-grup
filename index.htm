@@ -2,89 +2,144 @@
 <html lang="ka">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta name="description"
-          content="STEPANYAN IT GROUP — თანამედროვე ვებსაიტების შექმნა, ონლაინ მაღაზიები, მრავალენოვანი ვებგვერდები და ტექნიკური მომსახურება.">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
 
-    <meta name="theme-color" content="#080a12">
+    <meta
+        name="description"
+        content="STEPANYAN IT GRUP — დამწყები ციფრული IT ჯგუფი, რომელიც ქმნის თანამედროვე ვებგვერდებს, ონლაინ მაღაზიებს და ციფრულ გადაწყვეტილებებს."
+    >
 
-    <title>STEPANYAN IT GROUP — Digital Studio</title>
+    <meta
+        name="theme-color"
+        content="#05070d"
+    >
 
-    <link rel="stylesheet" href="style.css">
+    <title>STEPANYAN IT GRUP — Digital IT Group</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+Georgian:wght@400;500;600;700;800&display=swap"
-          rel="stylesheet">
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <link rel="stylesheet" href="style.css">
 </head>
+
 
 <body>
 
-<!-- =========================
-     PRELOADER
-========================= -->
+<!-- ================= PRELOADER ================= -->
 
 <div class="preloader" id="preloader">
-    <div class="loader-logo">S<span>/</span>IT</div>
+
+    <div class="loader-brand">
+        <span>S</span>
+        <div>
+            STEPANYAN
+            <small>IT GRUP</small>
+        </div>
+    </div>
+
+    <div class="loader-bar">
+        <span></span>
+    </div>
+
 </div>
 
 
-<!-- =========================
-     HEADER
-========================= -->
+<!-- ================= BACKGROUND ================= -->
+
+<div class="grid-background"></div>
+
+<div class="background-orb orb-one"></div>
+<div class="background-orb orb-two"></div>
+
+
+<!-- ================= HEADER ================= -->
 
 <header class="header" id="header">
 
-    <div class="container nav-container">
+    <div class="container nav">
 
-        <a href="#home" class="logo">
+        <a
+            href="#home"
+            class="brand"
+            aria-label="STEPANYAN IT GRUP"
+        >
 
-            <div class="logo-mark">
-                S<span>/</span>
-            </div>
+            <span class="brand-mark">S</span>
 
-            <div class="logo-text">
-                <strong>STEPANYAN</strong>
-                <small>IT GROUP</small>
-            </div>
+            <span class="brand-text">
+                STEPANYAN
+                <small>IT GRUP</small>
+            </span>
 
         </a>
 
 
-        <nav class="desktop-nav">
+        <nav class="desktop-navigation">
 
-            <a href="#home" data-i18n="nav_home">მთავარი</a>
-            <a href="#services" data-i18n="nav_services">სერვისები</a>
-            <a href="#projects" data-i18n="nav_projects">პროექტები</a>
-            <a href="#process" data-i18n="nav_process">პროცესი</a>
-            <a href="#pricing" data-i18n="nav_pricing">ფასები</a>
-            <a href="#faq" data-i18n="nav_faq">FAQ</a>
-            <a href="#contact" data-i18n="nav_contact">კონტაქტი</a>
+            <a href="#services" data-i18n="nav_services">
+                სერვისები
+            </a>
+
+            <a href="#projects" data-i18n="nav_projects">
+                პროექტები
+            </a>
+
+            <a href="#process" data-i18n="nav_process">
+                პროცესი
+            </a>
+
+            <a href="#pricing" data-i18n="nav_pricing">
+                ფასები
+            </a>
+
+            <a href="#contact" data-i18n="nav_contact">
+                კონტაქტი
+            </a>
 
         </nav>
 
 
-        <div class="nav-actions">
+        <div class="header-actions">
 
-            <div class="language-switcher">
-
-                <button class="lang-btn active" data-lang="ka">KA</button>
-                <button class="lang-btn" data-lang="en">EN</button>
-                <button class="lang-btn" data-lang="ru">RU</button>
-
-            </div>
-
-            <button class="theme-btn" id="themeToggle" aria-label="Theme">
-                ☼
+            <button
+                class="language-button"
+                id="languageButton"
+                aria-label="Change language"
+            >
+                KA
             </button>
 
-            <a href="#contact" class="nav-cta" data-i18n="nav_cta">
-                დავიწყოთ
+
+            <a
+                class="header-whatsapp"
+                href="https://wa.me/995500224822"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                WhatsApp
             </a>
 
-            <button class="mobile-menu-btn" id="mobileMenuBtn">
+
+            <button
+                class="mobile-menu-button"
+                id="mobileMenuButton"
+                aria-label="Open menu"
+                aria-expanded="false"
+            >
                 <span></span>
                 <span></span>
                 <span></span>
@@ -97,148 +152,256 @@
 
     <!-- MOBILE MENU -->
 
-    <div class="mobile-menu" id="mobileMenu">
+    <div
+        class="mobile-navigation"
+        id="mobileNavigation"
+    >
 
-        <a href="#home" data-i18n="nav_home">მთავარი</a>
-        <a href="#services" data-i18n="nav_services">სერვისები</a>
-        <a href="#projects" data-i18n="nav_projects">პროექტები</a>
-        <a href="#process" data-i18n="nav_process">პროცესი</a>
-        <a href="#pricing" data-i18n="nav_pricing">ფასები</a>
-        <a href="#faq" data-i18n="nav_faq">FAQ</a>
-        <a href="#contact" data-i18n="nav_contact">კონტაქტი</a>
+        <a href="#services" data-i18n="nav_services">
+            სერვისები
+        </a>
+
+        <a href="#projects" data-i18n="nav_projects">
+            პროექტები
+        </a>
+
+        <a href="#process" data-i18n="nav_process">
+            პროცესი
+        </a>
+
+        <a href="#pricing" data-i18n="nav_pricing">
+            ფასები
+        </a>
+
+        <a href="#contact" data-i18n="nav_contact">
+            კონტაქტი
+        </a>
+
+        <a
+            class="mobile-contact"
+            href="https://wa.me/995500224822"
+            target="_blank"
+            rel="noopener noreferrer"
+            data-i18n="nav_whatsapp"
+        >
+            WhatsApp-ზე დაკავშირება
+        </a>
 
     </div>
 
 </header>
 
 
+<!-- ================= MAIN ================= -->
 
 <main>
 
-<!-- =========================
-     HERO
-========================= -->
 
-<section class="hero section" id="home">
+<!-- ================= HERO ================= -->
 
-    <div class="hero-glow glow-one"></div>
-    <div class="hero-glow glow-two"></div>
+<section class="hero" id="home">
 
     <div class="container hero-grid">
+
 
         <div class="hero-content reveal">
 
             <div class="status-badge">
+
                 <span class="status-dot"></span>
-                REMOTE DIGITAL STUDIO
+
+                <span data-i18n="hero_badge">
+                    DIGITAL IT GROUP • ONLINE
+                </span>
+
             </div>
 
+
             <h1>
+
                 <span data-i18n="hero_title_1">
-                    ვქმნით ვებსაიტებს,
+                    იდეა
                 </span>
 
-                <span class="gradient-text" data-i18n="hero_title_2">
-                    რომლებიც მუშაობენ.
+                <br>
+
+                <span class="gradient-text"
+                      data-i18n="hero_title_2">
+                    ციფრულ რეალობად.
                 </span>
+
             </h1>
 
-            <p data-i18n="hero_description">
-                STEPANYAN IT GROUP — თანამედროვე ვებ-დეველოპმენტის
-                ბრენდი მცირე ბიზნესებისა და პირადი პროექტებისთვის.
-                სწრაფი, responsive და მრავალენოვანი ვებსაიტები.
+
+            <p
+                class="hero-description"
+                data-i18n="hero_description"
+            >
+                STEPANYAN IT GRUP არის დამწყები ციფრული IT ჯგუფი,
+                რომელიც ქმნის თანამედროვე ვებგვერდებს, ონლაინ მაღაზიებს
+                და მარტივ ციფრულ გადაწყვეტილებებს მცირე ბიზნესებისთვის.
             </p>
+
 
             <div class="hero-buttons">
 
-                <a href="#projects" class="btn btn-primary">
-                    <span data-i18n="hero_projects">პროექტების ნახვა</span>
-                    →
+                <a
+                    href="#pricing"
+                    class="button button-primary"
+                >
+                    <span data-i18n="hero_button_pricing">
+                        პაკეტების ნახვა
+                    </span>
+
+                    <strong>→</strong>
                 </a>
 
-                <a href="#contact" class="btn btn-secondary">
-                    <span data-i18n="hero_contact">დაგვიკავშირდი</span>
+
+                <a
+                    href="https://wa.me/995500224822?text=გამარჯობა%2C%20მაინტერესებს%20STEPANYAN%20IT%20GRUP-ის%20ვებგვერდის%20სერვისი."
+                    class="button button-outline"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    <span data-i18n="hero_button_contact">
+                        დაგვიკავშირდი
+                    </span>
+
+                    <strong>↗</strong>
                 </a>
 
             </div>
 
 
-            <div class="hero-note">
-                <span>✓</span>
-                <span data-i18n="hero_note">
-                    პატარა ვებგვერდები 10 ₾-დან
-                </span>
+            <div class="hero-stats">
+
+                <div class="stat">
+
+                    <strong>10 ₾</strong>
+
+                    <span data-i18n="stat_one">
+                        დან იწყება
+                    </span>
+
+                </div>
+
+
+                <div class="stat-divider"></div>
+
+
+                <div class="stat">
+
+                    <strong>100%</strong>
+
+                    <span data-i18n="stat_two">
+                        Responsive
+                    </span>
+
+                </div>
+
+
+                <div class="stat-divider"></div>
+
+
+                <div class="stat">
+
+                    <strong>ONLINE</strong>
+
+                    <span data-i18n="stat_three">
+                        ციფრული სერვისი
+                    </span>
+
+                </div>
+
             </div>
 
         </div>
 
 
-        <!-- HERO VISUAL -->
+        <!-- TECH CARD -->
 
         <div class="hero-visual reveal">
 
-            <div class="browser-window">
+            <div class="code-window">
 
-                <div class="browser-top">
+                <div class="window-header">
 
-                    <div class="browser-dots">
+                    <div class="window-dots">
                         <span></span>
                         <span></span>
                         <span></span>
                     </div>
 
-                    <div class="browser-url">
-                        stepanyan-it-group
-                    </div>
+                    <span class="window-url">
+                        stepanyan-it.grup
+                    </span>
+
+                    <span class="window-symbol">
+                        ◇
+                    </span>
 
                 </div>
 
 
-                <div class="browser-content">
+                <div class="code-content">
 
-                    <div class="code-line">
-                        <span class="code-purple">const</span>
-                        <span class="code-white">studio</span>
-                        =
-                        <span class="code-blue">"STEPANYAN IT GROUP"</span>
-                    </div>
-
-                    <div class="code-line">
-                        <span class="code-purple">const</span>
-                        <span class="code-white">design</span>
-                        =
-                        <span class="code-blue">"responsive"</span>
-                    </div>
-
-                    <div class="code-line">
-                        <span class="code-purple">const</span>
-                        <span class="code-white">support</span>
-                        =
-                        <span class="code-blue">"24/7-ready"</span>
-                    </div>
-
-                    <div class="code-line">
-                        <span class="code-green">✓</span>
-                        website.ready()
+                    <div class="code-row">
+                        <span class="line-number">01</span>
+                        <span class="purple">const</span>
+                        <span class="white">group</span>
+                        <span class="cyan">=</span>
+                        <span class="green">"STEPANYAN IT GRUP"</span>
                     </div>
 
 
-                    <div class="terminal-card">
+                    <div class="code-row">
+                        <span class="line-number">02</span>
+                        <span class="purple">const</span>
+                        <span class="white">focus</span>
+                        <span class="cyan">=</span>
+                        <span class="green">"WEB"</span>
+                    </div>
 
-                        <div>
-                            <span class="terminal-label">STATUS</span>
-                            <strong>ONLINE</strong>
-                        </div>
 
-                        <div>
-                            <span class="terminal-label">MODE</span>
-                            <strong>REMOTE</strong>
-                        </div>
+                    <div class="code-row">
+                        <span class="line-number">03</span>
+                        <span class="purple">function</span>
+                        <span class="blue">build</span>
+                        <span class="white">()</span>
+                    </div>
 
-                        <div>
-                            <span class="terminal-label">BUILD</span>
-                            <strong>READY</strong>
-                        </div>
+
+                    <div class="code-row indent">
+                        <span class="line-number">04</span>
+                        <span class="purple">return</span>
+                        <span class="yellow">modern</span>
+                        <span class="white">+</span>
+                        <span class="yellow">responsive</span>
+                    </div>
+
+
+                    <div class="code-row indent">
+                        <span class="line-number">05</span>
+                        <span class="white">+</span>
+                        <span class="yellow">creative</span>
+                        <span class="white">+</span>
+                        <span class="yellow">functional</span>
+                    </div>
+
+
+                    <div class="code-row">
+                        <span class="line-number">06</span>
+                        <span class="white">}</span>
+                    </div>
+
+
+                    <div class="terminal-status">
+
+                        <span class="terminal-dot"></span>
+
+                        <span>
+                            SYSTEM READY
+                        </span>
 
                     </div>
 
@@ -247,25 +410,25 @@
             </div>
 
 
-            <div class="floating-card card-one">
+            <div class="floating-tech-card card-fast">
 
-                <span class="floating-icon">⚡</span>
+                <span class="tech-icon">⚡</span>
 
                 <div>
-                    <strong>Responsive</strong>
-                    <small>ყველა ეკრანისთვის</small>
+                    <strong>FAST</strong>
+                    <small>Performance</small>
                 </div>
 
             </div>
 
 
-            <div class="floating-card card-two">
+            <div class="floating-tech-card card-responsive">
 
-                <span class="floating-icon">🌐</span>
+                <span class="tech-icon">◈</span>
 
                 <div>
-                    <strong>Multilingual</strong>
-                    <small>KA / EN / RU</small>
+                    <strong>RESPONSIVE</strong>
+                    <small>All Devices</small>
                 </div>
 
             </div>
@@ -277,62 +440,71 @@
 </section>
 
 
+<!-- ================= MARQUEE ================= -->
 
-<!-- =========================
-     TRUST BAR
-========================= -->
+<section class="marquee-section">
 
-<section class="trust-section">
+    <div class="marquee">
 
-    <div class="container trust-grid">
+        <span>WEB DEVELOPMENT</span>
+        <b>✦</b>
 
-        <div class="trust-item">
-            <strong>100%</strong>
-            <span data-i18n="trust_one">Responsive</span>
-        </div>
+        <span>WEB DESIGN</span>
+        <b>✦</b>
 
-        <div class="trust-item">
-            <strong>3+</strong>
-            <span data-i18n="trust_two">ენა</span>
-        </div>
+        <span>ONLINE STORES</span>
+        <b>✦</b>
 
-        <div class="trust-item">
-            <strong>GitHub</strong>
-            <span data-i18n="trust_three">Ready</span>
-        </div>
+        <span>DIGITAL SOLUTIONS</span>
+        <b>✦</b>
 
-        <div class="trust-item">
-            <strong>Remote</strong>
-            <span data-i18n="trust_four">Workflow</span>
-        </div>
+        <span>RESPONSIVE DESIGN</span>
+        <b>✦</b>
+
+        <span>WEB DEVELOPMENT</span>
+        <b>✦</b>
+
+        <span>WEB DESIGN</span>
+        <b>✦</b>
 
     </div>
 
 </section>
 
 
+<!-- ================= SERVICES ================= -->
 
-<!-- =========================
-     SERVICES
-========================= -->
-
-<section class="section" id="services">
+<section
+    class="section"
+    id="services"
+>
 
     <div class="container">
+
 
         <div class="section-heading reveal">
 
             <div class="section-label">
-                SERVICES
+                01 / SERVICES
             </div>
 
-            <h2 data-i18n="services_title">
-                ყველაფერი, რაც თანამედროვე ვებსაიტს სჭირდება.
+            <h2>
+
+                <span data-i18n="services_title_1">
+                    რას ვაკეთებთ
+                </span>
+
+                <br>
+
+                <em data-i18n="services_title_2">
+                    ციფრულად.
+                </em>
+
             </h2>
 
             <p data-i18n="services_description">
-                ვქმნით მარტივიდან ფუნქციურ ვებპროექტებამდე —
-                დიზაინი, კოდი, responsive სტრუქტურა და გაშვება.
+                ვქმნით ვებპროდუქტებს, რომლებიც პატარა ბიზნესსაც
+                აძლევს შესაძლებლობას ჰქონდეს თანამედროვე ონლაინ სივრცე.
             </p>
 
         </div>
@@ -343,149 +515,118 @@
 
             <article class="service-card reveal">
 
-                <div class="service-number">01</div>
-
-                <div class="service-icon">
-                    ◈
+                <div class="service-top">
+                    <span>01</span>
+                    <span>WEB</span>
                 </div>
 
-                <h3 data-i18n="service_1_title">
-                    Landing Page
+                <div class="service-icon">
+                    ⌘
+                </div>
+
+                <h3 data-i18n="service_one_title">
+                    ვებგვერდი
                 </h3>
 
-                <p data-i18n="service_1_text">
-                    თანამედროვე ერთგვერდიანი საიტი პროდუქტის,
-                    სერვისის ან პირადი ბრენდისთვის.
+                <p data-i18n="service_one_text">
+                    თანამედროვე ბიზნესის, კომპანიის ან პირადი
+                    ბრენდის ვებგვერდი.
                 </p>
 
-                <span class="service-link">
-                    10 ₾-დან →
-                </span>
+                <div class="tags">
+                    <span>Responsive</span>
+                    <span>Modern UI</span>
+                </div>
 
             </article>
 
 
+            <article
+                class="service-card service-featured reveal"
+            >
 
-            <article class="service-card reveal">
+                <div class="popular-badge">
+                    POPULAR
+                </div>
 
-                <div class="service-number">02</div>
+                <div class="service-top">
+                    <span>02</span>
+                    <span>STORE</span>
+                </div>
 
                 <div class="service-icon">
                     ◫
                 </div>
 
-                <h3 data-i18n="service_2_title">
-                    ბიზნეს ვებსაიტი
+                <h3 data-i18n="service_two_title">
+                    ონლაინ მაღაზია
                 </h3>
 
-                <p data-i18n="service_2_text">
-                    პროფესიონალური საიტი კომპანიისთვის,
-                    მაღაზიისთვის ან მომსახურებისთვის.
+                <p data-i18n="service_two_text">
+                    პროდუქციის კატალოგი, ძიება, კალათა და
+                    შეკვეთის ფუნქციები.
                 </p>
 
-                <span class="service-link">
-                    Custom →
-                </span>
+                <div class="tags">
+                    <span>Products</span>
+                    <span>Orders</span>
+                </div>
 
             </article>
 
 
-
             <article class="service-card reveal">
 
-                <div class="service-number">03</div>
+                <div class="service-top">
+                    <span>03</span>
+                    <span>LANDING</span>
+                </div>
 
                 <div class="service-icon">
                     ◎
                 </div>
 
-                <h3 data-i18n="service_3_title">
-                    Online Store
+                <h3 data-i18n="service_three_title">
+                    Landing Page
                 </h3>
 
-                <p data-i18n="service_3_text">
-                    პროდუქციის კატალოგი, კალათა,
-                    შეკვეთის ფორმა და სხვა ფუნქციები.
+                <p data-i18n="service_three_text">
+                    ერთი ძლიერი გვერდი პროდუქტის, მომსახურების
+                    ან ახალი ბიზნესის წარმოსაჩენად.
                 </p>
 
-                <span class="service-link">
-                    Custom →
-                </span>
+                <div class="tags">
+                    <span>Fast</span>
+                    <span>Focused</span>
+                </div>
 
             </article>
 
 
-
             <article class="service-card reveal">
 
-                <div class="service-number">04</div>
+                <div class="service-top">
+                    <span>04</span>
+                    <span>UI</span>
+                </div>
 
                 <div class="service-icon">
                     ✦
                 </div>
 
-                <h3 data-i18n="service_4_title">
-                    Multilingual
+                <h3 data-i18n="service_four_title">
+                    UI / Design
                 </h3>
 
-                <p data-i18n="service_4_text">
-                    რამდენიმე ენაზე მუშაობა ერთი
-                    ვებსაიტის ფარგლებში.
+                <p data-i18n="service_four_text">
+                    ფერები, სტრუქტურა, ღილაკები და მომხმარებლის
+                    თანამედროვე გამოცდილება.
                 </p>
 
-                <span class="service-link">
-                    KA / EN / RU →
-                </span>
-
-            </article>
-
-
-
-            <article class="service-card reveal">
-
-                <div class="service-number">05</div>
-
-                <div class="service-icon">
-                    ◉
+                <div class="tags">
+                    <span>UI/UX</span>
+                    <span>Brand</span>
                 </div>
-
-                <h3 data-i18n="service_5_title">
-                    Redesign
-                </h3>
-
-                <p data-i18n="service_5_text">
-                    ძველი საიტის ვიზუალური და
-                    ფუნქციური განახლება.
-                </p>
-
-                <span class="service-link">
-                    Modern UI →
-                </span>
-
-            </article>
-
-
-
-            <article class="service-card reveal">
-
-                <div class="service-number">06</div>
-
-                <div class="service-icon">
-                    ↗
-                </div>
-
-                <h3 data-i18n="service_6_title">
-                    Deployment
-                </h3>
-
-                <p data-i18n="service_6_text">
-                    GitHub Pages-ზე ან შესაბამის
-                    ჰოსტინგზე საიტის გაშვება.
-                </p>
-
-                <span class="service-link">
-                    Launch →
-                </span>
 
             </article>
 
@@ -496,99 +637,139 @@
 </section>
 
 
+<!-- ================= BEGINNER TRANSPARENT SECTION ================= -->
 
-<!-- =========================
-     FEATURED PROJECT
-========================= -->
-
-<section class="section project-section" id="projects">
+<section class="beginner-section">
 
     <div class="container">
+
+        <div class="beginner-card reveal">
+
+            <div class="beginner-icon">
+                S
+            </div>
+
+            <div class="beginner-content">
+
+                <div class="section-label">
+                    OUR POSITION
+                </div>
+
+                <h2 data-i18n="beginner_title">
+                    ვიწყებთ პატარა ნაბიჯით.
+                    ვაშენებთ დიდ იდეებს.
+                </h2>
+
+                <p data-i18n="beginner_text">
+                    STEPANYAN IT GRUP არის დამწყები ციფრული IT ჯგუფი.
+                    ჩვენ ჯერ ვვითარდებით, ვსწავლობთ და ვქმნით საკუთარ
+                    გამოცდილებას რეალურ პროექტებზე. ამიტომ ჩვენი ფასები
+                    ხელმისაწვდომია, ხოლო თითოეულ პროექტს ყურადღებით
+                    და ინდივიდუალურად ვუდგებით.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= PROJECT ================= -->
+
+<section
+    class="section project-section"
+    id="projects"
+>
+
+    <div class="container">
+
 
         <div class="section-heading reveal">
 
             <div class="section-label">
-                SELECTED PROJECT
+                02 / PORTFOLIO
             </div>
 
-            <h2 data-i18n="project_title">
-                რეალური პროექტი.
-            </h2>
+            <h2>
 
-            <p data-i18n="project_description">
-                ერთ-ერთი ვებპროექტი, რომელიც STEPANYAN IT GROUP-ის
-                მიერ არის შექმნილი.
-            </p>
+                <span data-i18n="project_title_1">
+                    ჩვენი პროექტი.
+                </span>
+
+                <br>
+
+                <em data-i18n="project_title_2">
+                    რეალური ნამუშევარი.
+                </em>
+
+            </h2>
 
         </div>
 
 
-        <div class="featured-project reveal">
+        <div class="project-card reveal">
+
 
             <div class="project-preview">
 
-                <div class="project-browser">
+                <div class="browser-header">
 
-                    <div class="project-browser-top">
+                    <div class="window-dots">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
 
-                        <div class="browser-dots">
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                        </div>
+                    <div class="browser-address">
+                        onlineminimarket.duckdns.org
+                    </div>
 
-                        <div class="project-address">
-                            onlineminimarket.duckdns.org
+                </div>
+
+
+                <div class="mini-site">
+
+                    <div class="mini-navigation">
+
+                        <strong>
+                            MINI MARKET
+                        </strong>
+
+                        <div>
+                            HOME
+                            PRODUCTS
+                            CONTACT
                         </div>
 
                     </div>
 
 
-                    <div class="project-screen">
+                    <div class="mini-hero">
 
-                        <div class="screen-header">
-                            <strong>MINI MARKET</strong>
+                        <div>
 
-                            <div class="screen-menu">
-                                GE&nbsp;&nbsp; EN&nbsp;&nbsp; RU&nbsp;&nbsp; AM
-                            </div>
-                        </div>
+                            <small>
+                                ONLINE STORE
+                            </small>
 
+                            <h3>
+                                Everything
+                                <br>
+                                in one place.
+                            </h3>
 
-                        <div class="screen-hero">
-
-                            <div>
-
-                                <small>ONLINE STORE</small>
-
-                                <h3>
-                                    ონლაინ მაღაზია
-                                </h3>
-
-                                <p>
-                                    პროდუქტები • კალათა • შეკვეთა
-                                </p>
-
-                            </div>
-
-                            <div class="fake-products">
-
-                                <div></div>
-                                <div></div>
-                                <div></div>
-
-                            </div>
+                            <span class="mini-button">
+                                VIEW PRODUCTS →
+                            </span>
 
                         </div>
 
 
-                        <div class="screen-products">
-
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                            <span></span>
-
+                        <div class="mini-cart">
+                            🛒
                         </div>
 
                     </div>
@@ -598,32 +779,31 @@
             </div>
 
 
-            <div class="project-info">
+            <div class="project-information">
 
-                <div class="project-tag">
-                    E-COMMERCE
+                <div class="case-number">
+                    CASE STUDY / 001
                 </div>
 
                 <h3>
-                    MINI MARKET
+                    Mini Market
                 </h3>
 
                 <p data-i18n="project_text">
-                    ონლაინ მაღაზიის ვებპროექტი ახალციხისთვის.
-                    საიტს აქვს პროდუქციის ძიება, კატეგორიები,
-                    კალათა, შეკვეთის ფუნქცია, რამდენიმე ენა
-                    და დამატებითი ფუნქციები.
+                    ონლაინ მაღაზიის პროექტი, რომელიც შექმნილია
+                    პროდუქციის ონლაინ წარმოსაჩენად და მომხმარებლისთვის
+                    მარტივი შეკვეთის პროცესის შესაქმნელად.
                 </p>
 
 
-                <div class="project-features">
+                <div class="project-list">
 
-                    <span>✓ Responsive</span>
-                    <span>✓ Multilingual</span>
+                    <span>✓ Product Catalog</span>
+                    <span>✓ Search</span>
                     <span>✓ Shopping Cart</span>
-                    <span>✓ Product Search</span>
-                    <span>✓ Delivery Info</span>
-                    <span>✓ AI Assistant</span>
+                    <span>✓ Multi-language</span>
+                    <span>✓ Mobile Design</span>
+                    <span>✓ Online Orders</span>
 
                 </div>
 
@@ -631,15 +811,11 @@
                 <a
                     href="https://onlineminimarket.duckdns.org/"
                     target="_blank"
-                    rel="noopener"
-                    class="btn btn-primary">
-
-                    <span data-i18n="project_button">
-                        Live Project
-                    </span>
-
-                    ↗
-
+                    rel="noopener noreferrer"
+                    class="project-button"
+                    data-i18n="project_button"
+                >
+                    პროექტის ნახვა ↗
                 </a>
 
             </div>
@@ -651,116 +827,109 @@
 </section>
 
 
+<!-- ================= PROCESS ================= -->
 
-<!-- =========================
-     PROCESS
-========================= -->
-
-<section class="section" id="process">
+<section
+    class="section"
+    id="process"
+>
 
     <div class="container">
+
 
         <div class="section-heading reveal">
 
             <div class="section-label">
-                WORKFLOW
+                03 / PROCESS
             </div>
 
-            <h2 data-i18n="process_title">
-                იდეიდან გაშვებამდე.
-            </h2>
+            <h2>
 
-            <p data-i18n="process_description">
-                მარტივი და გასაგები სამუშაო პროცესი.
-            </p>
+                <span data-i18n="process_title_1">
+                    იდეიდან
+                </span>
+
+                <br>
+
+                <em data-i18n="process_title_2">
+                    ვებგვერდამდე.
+                </em>
+
+            </h2>
 
         </div>
 
 
         <div class="process-grid">
 
-            <div class="process-step reveal">
 
-                <span>01</span>
+            <div class="process-item reveal">
 
-                <h3 data-i18n="process_1">
-                    მოთხოვნა
+                <span class="process-number">
+                    01
+                </span>
+
+                <h3 data-i18n="process_one_title">
+                    იდეა
                 </h3>
 
-                <p>
-                    Brief
+                <p data-i18n="process_one_text">
+                    ვიგებთ რა გჭირდება და რა მიზანი აქვს
+                    შენს ვებგვერდს.
                 </p>
 
             </div>
 
 
-            <div class="process-line"></div>
+            <div class="process-item reveal">
 
+                <span class="process-number">
+                    02
+                </span>
 
-            <div class="process-step reveal">
-
-                <span>02</span>
-
-                <h3 data-i18n="process_2">
+                <h3 data-i18n="process_two_title">
                     დიზაინი
                 </h3>
 
-                <p>
-                    UI / UX
+                <p data-i18n="process_two_text">
+                    ვქმნით ვიზუალურ სტრუქტურას და თანამედროვე
+                    მომხმარებლის ინტერფეისს.
                 </p>
 
             </div>
 
 
-            <div class="process-line"></div>
+            <div class="process-item reveal">
 
+                <span class="process-number">
+                    03
+                </span>
 
-            <div class="process-step reveal">
-
-                <span>03</span>
-
-                <h3 data-i18n="process_3">
-                    დეველოპმენტი
+                <h3 data-i18n="process_three_title">
+                    განვითარება
                 </h3>
 
-                <p>
-                    Code
+                <p data-i18n="process_three_text">
+                    დიზაინს ვაქცევთ რეალურ, ფუნქციონალურ
+                    ვებგვერდად.
                 </p>
 
             </div>
 
 
-            <div class="process-line"></div>
+            <div class="process-item reveal">
 
+                <span class="process-number">
+                    04
+                </span>
 
-            <div class="process-step reveal">
-
-                <span>04</span>
-
-                <h3 data-i18n="process_4">
-                    ტესტირება
-                </h3>
-
-                <p>
-                    QA
-                </p>
-
-            </div>
-
-
-            <div class="process-line"></div>
-
-
-            <div class="process-step reveal">
-
-                <span>05</span>
-
-                <h3 data-i18n="process_5">
+                <h3 data-i18n="process_four_title">
                     გაშვება
                 </h3>
 
-                <p>
-                    Launch
+                <p data-i18n="process_four_text">
+                    ვამოწმებთ ვებგვერდს და ვამზადებთ
+                    ონლაინ გამოსაქვეყნებლად.
                 </p>
 
             </div>
@@ -772,28 +941,39 @@
 </section>
 
 
+<!-- ================= PRICING ================= -->
 
-<!-- =========================
-     PRICING
-========================= -->
-
-<section class="section pricing-section" id="pricing">
+<section
+    class="section pricing-section"
+    id="pricing"
+>
 
     <div class="container">
+
 
         <div class="section-heading reveal">
 
             <div class="section-label">
-                PRICING
+                04 / PRICING
             </div>
 
-            <h2 data-i18n="pricing_title">
-                მარტივი და ხელმისაწვდომი ფასები.
+            <h2>
+
+                <span data-i18n="pricing_title_1">
+                    აირჩიე
+                </span>
+
+                <br>
+
+                <em data-i18n="pricing_title_2">
+                    შენი პაკეტი.
+                </em>
+
             </h2>
 
             <p data-i18n="pricing_description">
-                საბოლოო ფასი დამოკიდებულია პროექტის
-                ფუნქციებსა და მოცულობაზე.
+                ხელმისაწვდომი საწყისი პაკეტები და ინდივიდუალური
+                შეთავაზებები უფრო დიდი პროექტებისთვის.
             </p>
 
         </div>
@@ -804,144 +984,242 @@
 
             <!-- STARTER -->
 
-            <article class="price-card featured reveal">
+            <article class="pricing-card reveal">
 
-                <div class="popular-badge" data-i18n="popular">
-                    STARTER
+                <div class="plan-header">
+
+                    <span>01</span>
+
+                    <small>
+                        STARTER
+                    </small>
+
                 </div>
 
-                <div class="price-icon">
-                    ⚡
-                </div>
 
-                <h3 data-i18n="price_1_title">
-                    პატარა ვებსაიტი
+                <h3>
+                    Starter
                 </h3>
 
-                <p data-i18n="price_1_desc">
-                    მარტივი საიტი პირადი პროექტის,
-                    სერვისის ან მცირე ბიზნესისთვის.
+
+                <p data-i18n="starter_description">
+                    მარტივი და თანამედროვე ვებგვერდი
+                    მცირე ბიზნესისთვის.
                 </p>
 
-                <div class="price">
-                    <strong>10</strong>
-                    <span>₾-დან</span>
-                </div>
-
-                <ul>
-
-                    <li>✓ Responsive Design</li>
-                    <li>✓ თანამედროვე UI</li>
-                    <li>✓ მობილური ვერსია</li>
-                    <li>✓ ძირითადი SEO</li>
-                    <li>✓ GitHub-ready</li>
-
-                </ul>
-
-                <a href="#contact" class="btn btn-primary full">
-                    <span data-i18n="choose">
-                        შეკვეთა
-                    </span>
-                </a>
-
-            </article>
-
-
-
-            <!-- SUPPORT -->
-
-            <article class="price-card reveal">
-
-                <div class="price-icon">
-                    ♢
-                </div>
-
-                <h3 data-i18n="price_2_title">
-                    ვებგვერდის მომსახურება
-                </h3>
-
-                <p data-i18n="price_2_desc">
-                    უკვე შექმნილი ვებგვერდის საბაზისო
-                    ტექნიკური მხარდაჭერა.
-                </p>
 
                 <div class="price">
-
-                    <strong>5</strong>
-                    <span>₾ / თვე</span>
-
-                </div>
-
-                <div class="price-sub">
-                    პირველი 3 თვე
-                </div>
-
-
-                <div class="after-price">
-
-                    შემდეგ
 
                     <strong>
-                        10 ₾ / თვე
+                        10
                     </strong>
+
+                    <span>
+                        ₾-დან
+                    </span>
 
                 </div>
 
 
+                <div class="price-divider"></div>
+
+
                 <ul>
 
-                    <li>✓ საბაზისო ტექნიკური მხარდაჭერა</li>
-                    <li>✓ მცირე ცვლილებები</li>
-                    <li>✓ საიტის მდგომარეობის კონტროლი</li>
-                    <li>✓ კონსულტაცია</li>
+                    <li data-i18n="starter_one">
+                        ✓ თანამედროვე დიზაინი
+                    </li>
+
+                    <li data-i18n="starter_two">
+                        ✓ Mobile Responsive
+                    </li>
+
+                    <li data-i18n="starter_three">
+                        ✓ საკონტაქტო ინფორმაცია
+                    </li>
+
+                    <li data-i18n="starter_four">
+                        ✓ WhatsApp კავშირი
+                    </li>
+
+                    <li data-i18n="starter_five">
+                        ✓ ძირითადი SEO სტრუქტურა
+                    </li>
 
                 </ul>
 
-                <a href="#contact" class="btn btn-secondary full">
-                    <span data-i18n="support_button">
-                        მომსახურების დაწყება
-                    </span>
+
+                <a
+                    href="https://wa.me/995500224822?text=გამარჯობა%2C%20მინდა%20STARTER%20პაკეტის%20შეკვეთა."
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="pricing-button"
+                    data-i18n="order_button"
+                >
+                    შეკვეთა →
                 </a>
 
             </article>
 
 
+            <!-- BUSINESS -->
 
-            <!-- CUSTOM -->
+            <article
+                class="pricing-card pricing-main reveal"
+            >
 
-            <article class="price-card reveal">
-
-                <div class="price-icon">
-                    ◈
+                <div class="pricing-popular">
+                    MOST REQUESTED
                 </div>
 
-                <h3 data-i18n="price_3_title">
-                    Custom Project
+
+                <div class="plan-header">
+
+                    <span>02</span>
+
+                    <small>
+                        BUSINESS
+                    </small>
+
+                </div>
+
+
+                <h3>
+                    Business
                 </h3>
 
-                <p data-i18n="price_3_desc">
-                    ონლაინ მაღაზია, რთული ფუნქციები,
-                    ინდივიდუალური დიზაინი და სხვა.
+
+                <p data-i18n="business_description">
+                    უფრო სრულყოფილი ვებგვერდი
+                    ბიზნესისთვის.
                 </p>
 
-                <div class="custom-price">
-                    Custom
+
+                <div class="price custom-price">
+                    <strong>
+                        ინდივიდუალური
+                    </strong>
                 </div>
+
+
+                <div class="price-divider"></div>
+
 
                 <ul>
 
-                    <li>✓ ინდივიდუალური დიზაინი</li>
-                    <li>✓ სპეციალური ფუნქციები</li>
-                    <li>✓ ონლაინ მაღაზია</li>
-                    <li>✓ მრავალენოვანი სისტემა</li>
-                    <li>✓ ინდივიდუალური შეთავაზება</li>
+                    <li data-i18n="business_one">
+                        ✓ ყველაფერი Starter-იდან
+                    </li>
+
+                    <li data-i18n="business_two">
+                        ✓ რამდენიმე გვერდი
+                    </li>
+
+                    <li data-i18n="business_three">
+                        ✓ სერვისები / პროდუქტები
+                    </li>
+
+                    <li data-i18n="business_four">
+                        ✓ თანამედროვე ანიმაციები
+                    </li>
+
+                    <li data-i18n="business_five">
+                        ✓ დამატებითი ფუნქციები
+                    </li>
+
+                    <li data-i18n="business_six">
+                        ✓ WhatsApp ინტეგრაცია
+                    </li>
 
                 </ul>
 
-                <a href="#contact" class="btn btn-secondary full">
-                    <span data-i18n="contact_us">
-                        დაგვიკავშირდი
-                    </span>
+
+                <a
+                    href="https://wa.me/995500224822?text=გამარჯობა%2C%20მაინტერესებს%20BUSINESS%20ვებგვერდის%20პაკეტი."
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="pricing-button primary"
+                    data-i18n="consultation_button"
+                >
+                    კონსულტაცია →
+                </a>
+
+            </article>
+
+
+            <!-- STORE -->
+
+            <article class="pricing-card reveal">
+
+                <div class="plan-header">
+
+                    <span>03</span>
+
+                    <small>
+                        ONLINE STORE
+                    </small>
+
+                </div>
+
+
+                <h3>
+                    Online Store
+                </h3>
+
+
+                <p data-i18n="store_description">
+                    ონლაინ მაღაზიისთვის საჭირო ძირითადი
+                    ფუნქციონალი.
+                </p>
+
+
+                <div class="price custom-price">
+                    <strong>
+                        ინდივიდუალური
+                    </strong>
+                </div>
+
+
+                <div class="price-divider"></div>
+
+
+                <ul>
+
+                    <li data-i18n="store_one">
+                        ✓ პროდუქციის კატალოგი
+                    </li>
+
+                    <li data-i18n="store_two">
+                        ✓ კატეგორიები
+                    </li>
+
+                    <li data-i18n="store_three">
+                        ✓ პროდუქტის ძიება
+                    </li>
+
+                    <li data-i18n="store_four">
+                        ✓ კალათა
+                    </li>
+
+                    <li data-i18n="store_five">
+                        ✓ შეკვეთის სისტემა
+                    </li>
+
+                    <li data-i18n="store_six">
+                        ✓ WhatsApp შეკვეთა
+                    </li>
+
+                </ul>
+
+
+                <a
+                    href="https://wa.me/995500224822?text=გამარჯობა%2C%20მაინტერესებს%20ONLINE%20STORE-ის%20შექმნა."
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="pricing-button"
+                    data-i18n="order_button"
+                >
+                    შეკვეთა →
                 </a>
 
             </article>
@@ -949,14 +1227,50 @@
         </div>
 
 
-        <div class="pricing-note reveal">
+        <!-- SUPPORT -->
 
-            <strong>5 ₾ → 10 ₾</strong>
+        <div class="support-card reveal">
 
-            <span data-i18n="pricing_note">
-                პირველი 3 თვის შემდეგ ვებგვერდის მომსახურება
-                შეადგენს 10 ₾-ს თვეში.
-            </span>
+            <div>
+
+                <span class="support-label">
+                    AFTER LAUNCH
+                </span>
+
+                <h3 data-i18n="support_title">
+                    ტექნიკური მხარდაჭერა
+                </h3>
+
+                <p data-i18n="support_text">
+                    ვებგვერდის მცირე ცვლილებები, ტექნიკური დახმარება,
+                    სტატუსის კონტროლი და კონსულტაცია.
+                </p>
+
+            </div>
+
+
+            <div class="support-price">
+
+                <div>
+                    <strong>5 ₾</strong>
+                    <span>/ თვე</span>
+                </div>
+
+                <small data-i18n="support_first">
+                    პირველი 3 თვე
+                </small>
+
+
+                <div>
+                    <strong>10 ₾</strong>
+                    <span>/ თვე</span>
+                </div>
+
+                <small data-i18n="support_after">
+                    მე-4 თვიდან
+                </small>
+
+            </div>
 
         </div>
 
@@ -965,14 +1279,131 @@
 </section>
 
 
+<!-- ================= WHY ================= -->
 
-<!-- =========================
-     FAQ
-========================= -->
+<section class="section why-section">
 
-<section class="section" id="faq">
+    <div class="container why-grid">
 
-    <div class="container faq-container">
+
+        <div class="why-title reveal">
+
+            <div class="section-label">
+                05 / OUR APPROACH
+            </div>
+
+            <h2>
+
+                <span data-i18n="why_title_1">
+                    პატარა ჯგუფი.
+                </span>
+
+                <br>
+
+                <em data-i18n="why_title_2">
+                    დიდი ყურადღება.
+                </em>
+
+            </h2>
+
+        </div>
+
+
+        <div class="why-list">
+
+
+            <div class="why-item reveal">
+
+                <span>01</span>
+
+                <div>
+
+                    <h3>
+                        Mobile First
+                    </h3>
+
+                    <p data-i18n="why_one">
+                        ვებგვერდი უნდა გამოიყურებოდეს კარგად
+                        ტელეფონზე, ტაბლეტსა და კომპიუტერზე.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="why-item reveal">
+
+                <span>02</span>
+
+                <div>
+
+                    <h3>
+                        Modern Interface
+                    </h3>
+
+                    <p data-i18n="why_two">
+                        თანამედროვე ვიზუალური სტრუქტურა,
+                        სუფთა დიზაინი და მარტივი ნავიგაცია.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="why-item reveal">
+
+                <span>03</span>
+
+                <div>
+
+                    <h3>
+                        Direct Contact
+                    </h3>
+
+                    <p data-i18n="why_three">
+                        მომხმარებელს შეუძლია პირდაპირ WhatsApp-ზე
+                        დაგვიკავშირდეს.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="why-item reveal">
+
+                <span>04</span>
+
+                <div>
+
+                    <h3>
+                        Honest Growth
+                    </h3>
+
+                    <p data-i18n="why_four">
+                        ჩვენ დამწყები ჯგუფი ვართ და გამოცდილებას
+                        რეალურ პროექტებზე ვაგროვებთ.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= FAQ ================= -->
+
+<section class="section faq-section">
+
+    <div class="container">
+
 
         <div class="section-heading reveal">
 
@@ -980,8 +1411,18 @@
                 FAQ
             </div>
 
-            <h2 data-i18n="faq_title">
-                ხშირად დასმული კითხვები.
+            <h2>
+
+                <span data-i18n="faq_title_1">
+                    ხშირად
+                </span>
+
+                <br>
+
+                <em data-i18n="faq_title_2">
+                    დასმული კითხვები.
+                </em>
+
             </h2>
 
         </div>
@@ -994,21 +1435,20 @@
 
                 <button class="faq-question">
 
-                    <span data-i18n="faq_1_q">
-                        გაქვთ ფიზიკური ოფისი?
+                    <span data-i18n="faq_one_q">
+                        ნამდვილად 10 ₾ ღირს ვებგვერდი?
                     </span>
 
-                    <span class="faq-plus">
-                        +
-                    </span>
+                    <strong>+</strong>
 
                 </button>
 
                 <div class="faq-answer">
 
-                    <p data-i18n="faq_1_a">
-                        STEPANYAN IT GROUP მუშაობს დისტანციურად.
-                        პროექტებზე მუშაობა ხდება ონლაინ.
+                    <p data-i18n="faq_one_a">
+                        Starter პაკეტის საწყისი ფასი არის 10 ₾.
+                        საბოლოო ფასი შეიძლება შეიცვალოს,
+                        თუ პროექტს დამატებითი ფუნქციები ან დიდი მოცულობა აქვს.
                     </p>
 
                 </div>
@@ -1016,27 +1456,24 @@
             </div>
 
 
-
             <div class="faq-item reveal">
 
                 <button class="faq-question">
 
-                    <span data-i18n="faq_2_q">
-                        რამდენი ღირს ვებსაიტი?
+                    <span data-i18n="faq_two_q">
+                        რამდენ ხანში მზადდება?
                     </span>
 
-                    <span class="faq-plus">
-                        +
-                    </span>
+                    <strong>+</strong>
 
                 </button>
 
                 <div class="faq-answer">
 
-                    <p data-i18n="faq_2_a">
-                        პატარა ვებსაიტის ფასი იწყება 10 ₾-დან.
-                        უფრო რთული პროექტებისთვის ფასი
-                        განისაზღვრება ფუნქციების მიხედვით.
+                    <p data-i18n="faq_two_a">
+                        ვადები დამოკიდებულია პროექტის მოცულობასა და
+                        საჭირო ფუნქციებზე. მარტივი გვერდი უფრო სწრაფად მზადდება,
+                        დიდი პროექტი კი მეტ დროს მოითხოვს.
                     </p>
 
                 </div>
@@ -1044,26 +1481,23 @@
             </div>
 
 
-
             <div class="faq-item reveal">
 
                 <button class="faq-question">
 
-                    <span data-i18n="faq_3_q">
-                        რა ღირს ყოველთვიური მომსახურება?
+                    <span data-i18n="faq_three_q">
+                        მობილურზე იმუშავებს?
                     </span>
 
-                    <span class="faq-plus">
-                        +
-                    </span>
+                    <strong>+</strong>
 
                 </button>
 
                 <div class="faq-answer">
 
-                    <p data-i18n="faq_3_a">
-                        პირველი 3 თვის განმავლობაში მომსახურება
-                        ღირს 5 ₾ თვეში. მეოთხე თვიდან — 10 ₾ თვეში.
+                    <p data-i18n="faq_three_a">
+                        დიახ. ვებგვერდის დიზაინი გათვლილია ტელეფონზე,
+                        ტაბლეტსა და კომპიუტერზე.
                     </p>
 
                 </div>
@@ -1071,82 +1505,23 @@
             </div>
 
 
-
             <div class="faq-item reveal">
 
                 <button class="faq-question">
 
-                    <span data-i18n="faq_4_q">
-                        შეგიძლიათ საიტი რამდენიმე ენაზე გააკეთოთ?
+                    <span data-i18n="faq_four_q">
+                        როგორ დაგიკავშირდეთ?
                     </span>
 
-                    <span class="faq-plus">
-                        +
-                    </span>
+                    <strong>+</strong>
 
                 </button>
 
                 <div class="faq-answer">
 
-                    <p data-i18n="faq_4_a">
-                        დიახ. პროექტის საჭიროებიდან გამომდინარე
-                        შესაძლებელია ქართული, ინგლისური, რუსული
-                        და სხვა ენების დამატება.
-                    </p>
-
-                </div>
-
-            </div>
-
-
-
-            <div class="faq-item reveal">
-
-                <button class="faq-question">
-
-                    <span data-i18n="faq_5_q">
-                        შეგიძლიათ ჩემი საიტის GitHub Pages-ზე გაშვება?
-                    </span>
-
-                    <span class="faq-plus">
-                        +
-                    </span>
-
-                </button>
-
-                <div class="faq-answer">
-
-                    <p data-i18n="faq_5_a">
-                        დიახ. სტატიკური ვებსაიტების შემთხვევაში
-                        შესაძლებელია GitHub Pages-ის გამოყენება.
-                    </p>
-
-                </div>
-
-            </div>
-
-
-
-            <div class="faq-item reveal">
-
-                <button class="faq-question">
-
-                    <span data-i18n="faq_6_q">
-                        შემიძლია კოდი ჩემთან მქონდეს?
-                    </span>
-
-                    <span class="faq-plus">
-                        +
-                    </span>
-
-                </button>
-
-                <div class="faq-answer">
-
-                    <p data-i18n="faq_6_a">
-                        დიახ. პროექტის წყარო შეიძლება გადმოგეცეთ
-                        ღია კოდის სახით, რათა შემდგომ თავადაც შეძლოთ
-                        მისი შეცვლა.
+                    <p data-i18n="faq_four_a">
+                        ყველაზე მარტივი გზაა WhatsApp.
+                        დააჭირე WhatsApp-ის ღილაკს და პირდაპირ მოგვწერე.
                     </p>
 
                 </div>
@@ -1160,294 +1535,219 @@
 </section>
 
 
+<!-- ================= CTA ================= -->
 
-<!-- =========================
-     CONTACT
-========================= -->
-
-<section class="section contact-section" id="contact">
+<section
+    class="cta-section"
+    id="contact"
+>
 
     <div class="container">
 
-        <div class="contact-box reveal">
+        <div class="cta-card reveal">
 
-            <div class="contact-info">
+            <div class="cta-light"></div>
+
+
+            <div class="cta-content">
 
                 <div class="section-label">
-                    CONTACT
+                    LET'S BUILD
                 </div>
 
-                <h2 data-i18n="contact_title">
-                    გაქვს იდეა?
-                    <span class="gradient-text">
-                        შევქმნათ.
+
+                <h2>
+
+                    <span data-i18n="cta_title_1">
+                        გაქვს იდეა?
                     </span>
+
+                    <br>
+
+                    <em data-i18n="cta_title_2">
+                        დავიწყოთ.
+                    </em>
+
                 </h2>
 
-                <p data-i18n="contact_description">
-                    მომწერე რა ტიპის ვებსაიტი გჭირდება,
-                    რა ფუნქციები უნდა ჰქონდეს და დაგიკავშირდები.
+
+                <p data-i18n="cta_text">
+                    მოგვწერე WhatsApp-ზე და მოგვიყევი,
+                    როგორი ვებგვერდი ან ონლაინ პროექტი გჭირდება.
                 </p>
 
 
-                <div class="contact-details">
+                <a
+                    href="https://wa.me/995500224822?text=გამარჯობა%2C%20მაქვს%20იდეა%20ვებგვერდზე%20და%20მინდა%20კონსულტაცია."
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="cta-button"
+                >
 
-                    <div class="contact-detail">
+                    <span class="whatsapp-symbol">
+                        ◉
+                    </span>
 
-                        <span>◉</span>
+                    <span data-i18n="cta_button">
+                        მოგვწერე WhatsApp-ზე
+                    </span>
 
-                        <div>
-                            <small>WORK MODE</small>
-                            <strong>REMOTE</strong>
-                        </div>
+                    <strong>↗</strong>
 
-                    </div>
-
-
-                    <div class="contact-detail">
-
-                        <span>◈</span>
-
-                        <div>
-                            <small>STARTING PRICE</small>
-                            <strong>10 ₾</strong>
-                        </div>
-
-                    </div>
+                </a>
 
 
-                    <div class="contact-detail">
-
-                        <span>♢</span>
-
-                        <div>
-                            <small>WEBSITE SUPPORT</small>
-                            <strong>5 ₾ / month</strong>
-                        </div>
-
-                    </div>
-
+                <div class="phone">
+                    +995 500 22 48 22
                 </div>
 
             </div>
-
-
-            <form class="contact-form" id="contactForm">
-
-                <div class="form-row">
-
-                    <div class="form-group">
-
-                        <label for="name" data-i18n="form_name">
-                            სახელი
-                        </label>
-
-                        <input
-                            type="text"
-                            id="name"
-                            name="name"
-                            placeholder="შენი სახელი"
-                            required>
-
-                    </div>
-
-
-                    <div class="form-group">
-
-                        <label for="email">
-                            Email
-                        </label>
-
-                        <input
-                            type="email"
-                            id="email"
-                            name="email"
-                            placeholder="you@example.com"
-                            required>
-
-                    </div>
-
-                </div>
-
-
-                <div class="form-group">
-
-                    <label for="service" data-i18n="form_service">
-                        რა გჭირდება?
-                    </label>
-
-                    <select id="service" name="service">
-
-                        <option value="website">
-                            Website
-                        </option>
-
-                        <option value="landing">
-                            Landing Page
-                        </option>
-
-                        <option value="store">
-                            Online Store
-                        </option>
-
-                        <option value="redesign">
-                            Redesign
-                        </option>
-
-                        <option value="support">
-                            Website Support
-                        </option>
-
-                    </select>
-
-                </div>
-
-
-                <div class="form-group">
-
-                    <label for="message" data-i18n="form_message">
-                        შეტყობინება
-                    </label>
-
-                    <textarea
-                        id="message"
-                        name="message"
-                        rows="5"
-                        placeholder="მომიყევი შენი პროექტის შესახებ..."
-                        required></textarea>
-
-                </div>
-
-
-                <button type="submit" class="btn btn-primary full">
-
-                    <span data-i18n="form_button">
-                        შეტყობინების გაგზავნა
-                    </span>
-
-                    →
-
-                </button>
-
-
-                <p class="form-note" data-i18n="form_note">
-                    ფორმა გახსნის თქვენს Email პროგრამას
-                    შეტყობინების გასაგზავნად.
-                </p>
-
-            </form>
 
         </div>
 
     </div>
 
 </section>
+
 
 </main>
 
 
-
-<!-- =========================
-     FOOTER
-========================= -->
+<!-- ================= FOOTER ================= -->
 
 <footer class="footer">
 
-    <div class="container footer-grid">
+    <div class="container">
 
-        <div class="footer-brand">
 
-            <div class="logo">
+        <div class="footer-main">
 
-                <div class="logo-mark">
-                    S<span>/</span>
-                </div>
 
-                <div class="logo-text">
-                    <strong>STEPANYAN</strong>
-                    <small>IT GROUP</small>
-                </div>
+            <div class="footer-brand">
+
+                <a
+                    href="#home"
+                    class="brand"
+                >
+
+                    <span class="brand-mark">
+                        S
+                    </span>
+
+                    <span class="brand-text">
+                        STEPANYAN
+                        <small>IT GRUP</small>
+                    </span>
+
+                </a>
+
+
+                <p data-i18n="footer_description">
+                    დამწყები ციფრული IT ჯგუფი,
+                    რომელიც ქმნის თანამედროვე ვებპროდუქტებს.
+                </p>
 
             </div>
 
-            <p data-i18n="footer_text">
-                Remote digital studio —
-                თანამედროვე ვებსაიტები მცირე ბიზნესებისა
-                და პირადი პროექტებისთვის.
-            </p>
+
+            <div class="footer-column">
+
+                <span>
+                    EXPLORE
+                </span>
+
+                <a
+                    href="#services"
+                    data-i18n="nav_services"
+                >
+                    სერვისები
+                </a>
+
+                <a
+                    href="#projects"
+                    data-i18n="nav_projects"
+                >
+                    პროექტები
+                </a>
+
+                <a
+                    href="#pricing"
+                    data-i18n="nav_pricing"
+                >
+                    ფასები
+                </a>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <span>
+                    CONTACT
+                </span>
+
+                <a
+                    href="https://wa.me/995500224822"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    WhatsApp
+                </a>
+
+                <a href="tel:+995500224822">
+                    +995 500 22 48 22
+                </a>
+
+                <a href="mailto:marktsai44@gmail.com">
+                    marktsai44@gmail.com
+                </a>
+
+            </div>
+
 
         </div>
 
 
-        <div class="footer-column">
+        <div class="footer-bottom">
 
-            <h4 data-i18n="footer_services">
-                სერვისები
-            </h4>
+            <span>
+                © 2026 STEPANYAN IT GRUP
+            </span>
 
-            <a href="#services">Web Development</a>
-            <a href="#services">Landing Pages</a>
-            <a href="#services">Online Stores</a>
-            <a href="#services">Redesign</a>
-
-        </div>
-
-
-        <div class="footer-column">
-
-            <h4 data-i18n="footer_company">
-                ინფორმაცია
-            </h4>
-
-            <a href="#projects" data-i18n="nav_projects">
-                პროექტები
-            </a>
-
-            <a href="#pricing" data-i18n="nav_pricing">
-                ფასები
-            </a>
-
-            <a href="#faq">
-                FAQ
-            </a>
-
-            <a href="#contact" data-i18n="nav_contact">
-                კონტაქტი
-            </a>
+            <span>
+                DIGITAL IT GROUP • ONLINE
+            </span>
 
         </div>
-
-
-        <div class="footer-column">
-
-            <h4>STEPANYAN IT GROUP</h4>
-
-            <span>Remote</span>
-            <span>Web Development</span>
-            <span>Georgia</span>
-
-        </div>
-
-    </div>
-
-
-    <div class="container footer-bottom">
-
-        <span>
-            © <span id="currentYear"></span> STEPANYAN IT GROUP
-        </span>
-
-        <span>
-            Built remotely.
-        </span>
 
     </div>
 
 </footer>
 
 
+<!-- ================= FLOATING WHATSAPP ================= -->
+
+<a
+    href="https://wa.me/995500224822?text=გამარჯობა%2C%20მაინტერესებს%20STEPANYAN%20IT%20GRUP-ის%20სერვისები."
+    class="floating-whatsapp"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="WhatsApp"
+>
+
+    <span>
+        ◉
+    </span>
+
+    <div>
+        <strong>WhatsApp</strong>
+        <small>მოგვწერე</small>
+    </div>
+
+</a>
+
 
 <script src="script.js"></script>
 
 </body>
-</html>
+    </html>
