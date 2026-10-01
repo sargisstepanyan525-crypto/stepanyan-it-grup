@@ -1,145 +1,1156 @@
+/* =====================================================
+   STEPANYAN IT GROUP
+   JAVASCRIPT
+===================================================== */
+
+
+/* =====================================================
+   PRELOADER
+===================================================== */
+
+window.addEventListener("load", () => {
+
+    const preloader =
+        document.getElementById("preloader");
+
+    setTimeout(() => {
+
+        preloader.classList.add("hidden");
+
+    }, 500);
+
+});
+
+
+
+/* =====================================================
+   HEADER SCROLL
+===================================================== */
+
+const header =
+    document.getElementById("header");
+
+
+window.addEventListener("scroll", () => {
+
+    if (window.scrollY > 30) {
+
+        header.classList.add("scrolled");
+
+    } else {
+
+        header.classList.remove("scrolled");
+
+    }
+
+});
+
+
+
+/* =====================================================
+   MOBILE MENU
+===================================================== */
+
+const mobileMenuBtn =
+    document.getElementById("mobileMenuBtn");
+
+const mobileMenu =
+    document.getElementById("mobileMenu");
+
+
+mobileMenuBtn.addEventListener("click", () => {
+
+    mobileMenu.classList.toggle("open");
+
+    document.body.classList.toggle("no-scroll");
+
+});
+
+
+document
+    .querySelectorAll(".mobile-menu a")
+    .forEach(link => {
+
+        link.addEventListener("click", () => {
+
+            mobileMenu.classList.remove("open");
+
+            document.body.classList.remove("no-scroll");
+
+        });
+
+    });
+
+
+
+/* =====================================================
+   THEME
+===================================================== */
+
+const themeToggle =
+    document.getElementById("themeToggle");
+
+
+const savedTheme =
+    localStorage.getItem("stepanyan-theme");
+
+
+if (savedTheme === "light") {
+
+    document.body.classList.add("light");
+
+    themeToggle.textContent = "☾";
+
+}
+
+
+themeToggle.addEventListener("click", () => {
+
+    document.body.classList.toggle("light");
+
+    const isLight =
+        document.body.classList.contains("light");
+
+
+    themeToggle.textContent =
+        isLight ? "☾" : "☼";
+
+
+    localStorage.setItem(
+        "stepanyan-theme",
+        isLight ? "light" : "dark"
+    );
+
+});
+
+
+
+/* =====================================================
+   FAQ
+===================================================== */
+
+document
+    .querySelectorAll(".faq-question")
+    .forEach(button => {
+
+        button.addEventListener("click", () => {
+
+            const item =
+                button.closest(".faq-item");
+
+            const answer =
+                item.querySelector(".faq-answer");
+
+
+            const isOpen =
+                item.classList.contains("open");
+
+
+            document
+                .querySelectorAll(".faq-item")
+                .forEach(other => {
+
+                    other.classList.remove("open");
+
+                    const otherAnswer =
+                        other.querySelector(".faq-answer");
+
+                    otherAnswer.style.maxHeight = null;
+
+                });
+
+
+            if (!isOpen) {
+
+                item.classList.add("open");
+
+                answer.style.maxHeight =
+                    answer.scrollHeight + "px";
+
+            }
+
+        });
+
+    });
+
+
+
+/* =====================================================
+   REVEAL ON SCROLL
+===================================================== */
+
+const revealObserver =
+    new IntersectionObserver(
+        entries => {
+
+            entries.forEach(entry => {
+
+                if (entry.isIntersecting) {
+
+                    entry.target.classList.add("visible");
+
+                    revealObserver.unobserve(
+                        entry.target
+                    );
+
+                }
+
+            });
+
+        },
+        {
+            threshold: 0.12
+        }
+    );
+
+
+document
+    .querySelectorAll(".reveal")
+    .forEach(element => {
+
+        revealObserver.observe(element);
+
+    });
+
+
+
+/* =====================================================
+   CURRENT YEAR
+===================================================== */
+
+document.getElementById("currentYear")
+    .textContent =
+    new Date().getFullYear();
+
+
+
+/* =====================================================
+   LANGUAGE SYSTEM
+===================================================== */
+
 const translations = {
-  ka: {
-    nav_home:"მთავარი",nav_services:"სერვისები",nav_portfolio:"პორტფოლიო",nav_about:"ჩვენს შესახებ",nav_contact:"კონტაქტი",
-    eyebrow:"REMOTE DIGITAL STUDIO",hero_title:"თქვენი პატარა ბიზნესი<br><em>ონლაინ იწყება.</em>",
-    hero_text:"STEPANYAN IT GROUP ქმნის მარტივ, თანამედროვე და მობილურზე მორგებულ ვებგვერდებს მცირე ბიზნესებისთვის.",
-    price_label:"პატარა ვებგვერდი",price_from:"დან",hero_cta:"დაწყება →",hero_portfolio:"ნამუშევრები",
-    trust_remote:"დისტანციური",trust_online:"ონლაინ კომუნიკაცია",trust_year:"პირველი ეტაპი",code_status:"საიტი მზადაა",
-    services_eyebrow:"WHAT WE DO",services_title:"ციფრული სერვისები",services_intro:"ვიწყებთ მარტივად და ვზრდით პროექტს თქვენი საჭიროების მიხედვით.",
-    s1_title:"მინი ვებგვერდი",s1_text:"ერთი გვერდის თანამედროვე საიტი კონტაქტით, სერვისებით და თქვენი ბიზნესის ინფორმაციით.",from:"დან",
-    s2_title:"ბიზნეს ვებგვერდი",s2_text:"მრავალსექციური საიტი პორტფოლიოთი, პროდუქტებით, კონტაქტით და მობილური დიზაინით.",s2_price:"ფასი შეთანხმებით",
-    s3_title:"AI & Digital",s3_text:"AI ინსტრუმენტების გამოყენება ტექსტის, ვიზუალების და ციფრული სამუშაო პროცესების გასამარტივებლად.",s3_price:"ინდივიდუალურად",
-    s4_title:"მხარდაჭერა",s4_text:"არსებულ საიტზე მცირე ცვლილებები, ტექსტის განახლება, დიზაინის კორექტირება და ტექნიკური დახმარება.",s4_price:"შეთანხმებით",
-    portfolio_eyebrow:"SELECTED PROJECT",portfolio_title:"პირველი ნამუშევარი",project_tag:"LIVE PROJECT",
-    project_text:"მცირე მაღაზიისთვის შექმნილი თანამედროვე ვებგვერდი პროდუქტის ძიებით, კატეგორიებით, კალათით და საკონტაქტო ფუნქციებით.",project_cta:"მსგავსი საიტი მინდა →",
-    about_eyebrow:"ABOUT THE GROUP",about_title:"პატარა გუნდი.<br><em>ციფრული მისამართი.</em>",
-    about_text:"STEPANYAN IT GROUP არის მცირე, დისტანციური ციფრული ინიციატივა. ჩვენ არ გვაქვს ფიზიკური ოფისი — ვმუშაობთ ონლაინ და კლიენტთან კომუნიკაციას დისტანციურად ვაწარმოებთ.",
-    about_text2:"ამ ეტაპზე ვაგროვებთ გამოცდილებას რეალურ მცირე პროექტებზე, ამიტომ საწყისი ფასები დაბალია. მიზანია ხარისხიანი პირველი ნაბიჯი მათთვის, ვისაც დიდი ბიუჯეტის გარეშე სურს საკუთარი ციფრული სივრცე.",
-    fact1:"ფიზიკური ოფისის გარეშე",fact2:"დისტანციური კომუნიკაცია",fact3:"საწყისი მინი-საიტი",
-    contact_eyebrow:"START A PROJECT",contact_title:"მოდი, შენი იდეა<br><em>ონლაინ გავუშვათ.</em>",
-    contact_text:"მოგვწერე რა ტიპის საიტი გჭირდება. ფორმის გაგზავნის შემდეგ WhatsApp-ში ავტომატურად გაიხსნება მომზადებული შეტყობინება.",
-    form_name:"სახელი",form_type:"საიტის ტიპი",form_choose:"აირჩიეთ...",opt_mini:"მინი ვებგვერდი — 10 ₾-დან",opt_business:"ბიზნეს ვებგვერდი",opt_other:"სხვა",
-    form_message:"მოკლე აღწერა",form_send:"WhatsApp-ზე გაგზავნა →",form_note:"ფორმა არ აგროვებს მონაცემებს ჩვენს სერვერზე — შეტყობინება იხსნება თქვენს WhatsApp-ში.",
-    footer_text:"Remote digital studio for small businesses.",footer_nav:"ნავიგაცია",footer_contact:"კონტაქტი",footer_remote:"REMOTE • DIGITAL • ONLINE"
-  },
-  en: {
-    nav_home:"Home",nav_services:"Services",nav_portfolio:"Portfolio",nav_about:"About",nav_contact:"Contact",
-    eyebrow:"REMOTE DIGITAL STUDIO",hero_title:"Your small business<br><em>starts online.</em>",
-    hero_text:"STEPANYAN IT GROUP creates simple, modern and mobile-friendly websites for small businesses.",
-    price_label:"Small website",price_from:"from",hero_cta:"Start a project →",hero_portfolio:"Our work",
-    trust_remote:"Remote",trust_online:"Online communication",trust_year:"First stage",code_status:"Site ready",
-    services_eyebrow:"WHAT WE DO",services_title:"Digital services",services_intro:"We start simple and expand the project around your needs.",
-    s1_title:"Mini website",s1_text:"A modern one-page website with contact details, services and business information.",from:"from",
-    s2_title:"Business website",s2_text:"A multi-section website with portfolio, products, contact tools and responsive design.",s2_price:"Custom quote",
-    s3_title:"AI & Digital",s3_text:"Using AI tools to simplify content, visuals and digital workflows.",s3_price:"Custom",
-    s4_title:"Support",s4_text:"Small website updates, text changes, design adjustments and technical assistance.",s4_price:"Custom",
-    portfolio_eyebrow:"SELECTED PROJECT",portfolio_title:"First project",project_tag:"LIVE PROJECT",
-    project_text:"A modern website created for a small market with product search, categories, cart and contact features.",project_cta:"I want a similar site →",
-    about_eyebrow:"ABOUT THE GROUP",about_title:"Small team.<br><em>Digital address.</em>",
-    about_text:"STEPANYAN IT GROUP is a small remote digital initiative. We do not have a physical office — we work online and communicate with clients remotely.",
-    about_text2:"At this stage we are building experience through real small projects, so our starting prices are low. The goal is to give small businesses a quality first step into their own digital space.",
-    fact1:"No physical office",fact2:"Remote communication",fact3:"Starter mini-site",
-    contact_eyebrow:"START A PROJECT",contact_title:"Let's put your idea<br><em>online.</em>",
-    contact_text:"Tell us what kind of website you need. After submitting the form, a prepared message will open in WhatsApp.",
-    form_name:"Name",form_type:"Website type",form_choose:"Choose...",opt_mini:"Mini website — from 10 GEL",opt_business:"Business website",opt_other:"Other",
-    form_message:"Short description",form_send:"Send via WhatsApp →",form_note:"This form does not store data on our server — the message opens in your WhatsApp.",
-    footer_text:"Remote digital studio for small businesses.",footer_nav:"Navigation",footer_contact:"Contact",footer_remote:"REMOTE • DIGITAL • ONLINE"
-  },
-  hy: {
-    nav_home:"Գլխավոր",nav_services:"Ծառայություններ",nav_portfolio:"Պորտֆոլիո",nav_about:"Մեր մասին",nav_contact:"Կապ",
-    eyebrow:"REMOTE DIGITAL STUDIO",hero_title:"Ձեր փոքր բիզնեսը<br><em>սկսվում է առցանց։</em>",
-    hero_text:"STEPANYAN IT GROUP-ը ստեղծում է պարզ, ժամանակակից և բջջայինին հարմար կայքեր փոքր բիզնեսների համար։",
-    price_label:"Փոքր կայք",price_from:"սկսած",hero_cta:"Սկսել →",hero_portfolio:"Աշխատանքներ",
-    trust_remote:"Հեռավար",trust_online:"Առցանց կապ",trust_year:"Առաջին փուլ",code_status:"Կայքը պատրաստ է",
-    services_eyebrow:"WHAT WE DO",services_title:"Թվային ծառայություններ",services_intro:"Սկսում ենք պարզ և զարգացնում նախագիծը ըստ ձեր կարիքների։",
-    s1_title:"Մինի կայք",s1_text:"Ժամանակակից մեկ էջանոց կայք՝ կոնտակտներով, ծառայություններով և բիզնեսի տեղեկություններով։",from:"սկսած",
-    s2_title:"Բիզնես կայք",s2_text:"Բազմաբաժին կայք՝ պորտֆոլիոյով, ապրանքներով, կապի գործիքներով և հարմարեցված դիզայնով։",s2_price:"Գինը՝ համաձայնությամբ",
-    s3_title:"AI & Digital",s3_text:"AI գործիքների կիրառում բովանդակության, վիզուալների և թվային գործընթացների պարզեցման համար։",s3_price:"Անհատական",
-    s4_title:"Աջակցություն",s4_text:"Փոքր փոփոխություններ, տեքստերի թարմացում, դիզայնի շտկումներ և տեխնիկական աջակցություն։",s4_price:"Համաձայնությամբ",
-    portfolio_eyebrow:"SELECTED PROJECT",portfolio_title:"Առաջին նախագիծ",project_tag:"LIVE PROJECT",
-    project_text:"Փոքր խանութի համար ստեղծված ժամանակակից կայք՝ ապրանքների որոնմամբ, կատեգորիաներով, զամբյուղով և կապի գործիքներով։",project_cta:"Ցանկանում եմ նման կայք →",
-    about_eyebrow:"ABOUT THE GROUP",about_title:"Փոքր թիմ։<br><em>Թվային հասցե։</em>",
-    about_text:"STEPANYAN IT GROUP-ը փոքր հեռավար թվային նախաձեռնություն է։ Մենք ֆիզիկական գրասենյակ չունենք՝ աշխատում ենք առցանց և հաճախորդների հետ կապվում հեռավար։",
-    about_text2:"Այս փուլում փորձ ենք հավաքում իրական փոքր նախագծերի միջոցով, այդ պատճառով մեկնարկային գները ցածր են։ Նպատակը փոքր բիզնեսներին մատչելի թվային առաջին քայլ տալն է։",
-    fact1:"Առանց ֆիզիկական գրասենյակի",fact2:"Հեռավար կապ",fact3:"Մեկնարկային մինի կայք",
-    contact_eyebrow:"START A PROJECT",contact_title:"Եկեք ձեր գաղափարը<br><em>տեղադրենք առցանց։</em>",
-    contact_text:"Գրեք, թե ինչպիսի կայք է անհրաժեշտ։ Ձևը ուղարկելուց հետո WhatsApp-ում կբացվի պատրաստված հաղորդագրություն։",
-    form_name:"Անուն",form_type:"Կայքի տեսակ",form_choose:"Ընտրեք...",opt_mini:"Մինի կայք — 10 GEL-ից",opt_business:"Բիզնես կայք",opt_other:"Այլ",
-    form_message:"Կարճ նկարագրություն",form_send:"Ուղարկել WhatsApp-ով →",form_note:"Ձևը տվյալներ չի պահում մեր սերվերում․ հաղորդագրությունը բացվում է ձեր WhatsApp-ում։",
-    footer_text:"Remote digital studio for small businesses.",footer_nav:"Նավիգացիա",footer_contact:"Կապ",footer_remote:"REMOTE • DIGITAL • ONLINE"
-  },
-  ru: {
-    nav_home:"Главная",nav_services:"Услуги",nav_portfolio:"Портфолио",nav_about:"О нас",nav_contact:"Контакты",
-    eyebrow:"REMOTE DIGITAL STUDIO",hero_title:"Ваш малый бизнес<br><em>начинается онлайн.</em>",
-    hero_text:"STEPANYAN IT GROUP создаёт простые, современные и адаптивные сайты для малого бизнеса.",
-    price_label:"Небольшой сайт",price_from:"от",hero_cta:"Начать проект →",hero_portfolio:"Наши работы",
-    trust_remote:"Удалённо",trust_online:"Онлайн связь",trust_year:"Первый этап",code_status:"Сайт готов",
-    services_eyebrow:"WHAT WE DO",services_title:"Цифровые услуги",services_intro:"Начинаем с простого и расширяем проект под ваши задачи.",
-    s1_title:"Мини-сайт",s1_text:"Современный одностраничный сайт с контактами, услугами и информацией о бизнесе.",from:"от",
-    s2_title:"Бизнес-сайт",s2_text:"Многораздельный сайт с портфолио, товарами, контактами и адаптивным дизайном.",s2_price:"Цена по договорённости",
-    s3_title:"AI & Digital",s3_text:"Использование AI-инструментов для упрощения контента, визуалов и цифровых процессов.",s3_price:"Индивидуально",
-    s4_title:"Поддержка",s4_text:"Небольшие изменения сайта, обновление текста, корректировка дизайна и техническая помощь.",s4_price:"По договорённости",
-    portfolio_eyebrow:"SELECTED PROJECT",portfolio_title:"Первый проект",project_tag:"LIVE PROJECT",
-    project_text:"Современный сайт для небольшого магазина с поиском товаров, категориями, корзиной и контактными функциями.",project_cta:"Хочу похожий сайт →",
-    about_eyebrow:"ABOUT THE GROUP",about_title:"Небольшая команда.<br><em>Цифровой адрес.</em>",
-    about_text:"STEPANYAN IT GROUP — небольшая удалённая цифровая инициатива. У нас нет физического офиса — мы работаем онлайн и общаемся с клиентами дистанционно.",
-    about_text2:"На этом этапе мы набираемся опыта на реальных небольших проектах, поэтому стартовые цены низкие. Цель — дать малому бизнесу доступный первый шаг в цифровое пространство.",
-    fact1:"Без физического офиса",fact2:"Удалённая связь",fact3:"Стартовый мини-сайт",
-    contact_eyebrow:"START A PROJECT",contact_title:"Давайте запустим вашу идею<br><em>онлайн.</em>",
-    contact_text:"Напишите, какой сайт вам нужен. После отправки формы в WhatsApp автоматически откроется готовое сообщение.",
-    form_name:"Имя",form_type:"Тип сайта",form_choose:"Выберите...",opt_mini:"Мини-сайт — от 10 GEL",opt_business:"Бизнес-сайт",opt_other:"Другое",
-    form_message:"Краткое описание",form_send:"Отправить через WhatsApp →",form_note:"Форма не сохраняет данные на нашем сервере — сообщение открывается в вашем WhatsApp.",
-    footer_text:"Remote digital studio for small businesses.",footer_nav:"Навигация",footer_contact:"Контакты",footer_remote:"REMOTE • DIGITAL • ONLINE"
-  }
+
+
+    ka: {
+
+        nav_home: "მთავარი",
+        nav_services: "სერვისები",
+        nav_projects: "პროექტები",
+        nav_process: "პროცესი",
+        nav_pricing: "ფასები",
+        nav_faq: "FAQ",
+        nav_contact: "კონტაქტი",
+        nav_cta: "დავიწყოთ",
+
+
+        hero_title_1:
+            "ვქმნით ვებსაიტებს,",
+
+        hero_title_2:
+            "რომლებიც მუშაობენ.",
+
+        hero_description:
+            "STEPANYAN IT GROUP — თანამედროვე ვებ-დეველოპმენტის ბრენდი მცირე ბიზნესებისა და პირადი პროექტებისთვის. სწრაფი, responsive და მრავალენოვანი ვებსაიტები.",
+
+        hero_projects:
+            "პროექტების ნახვა",
+
+        hero_contact:
+            "დაგვიკავშირდი",
+
+        hero_note:
+            "პატარა ვებგვერდები 10 ₾-დან",
+
+
+        trust_one:
+            "Responsive",
+
+        trust_two:
+            "ენა",
+
+        trust_three:
+            "Ready",
+
+        trust_four:
+            "Workflow",
+
+
+        services_title:
+            "ყველაფერი, რაც თანამედროვე ვებსაიტს სჭირდება.",
+
+        services_description:
+            "ვქმნით მარტივიდან ფუნქციურ ვებპროექტებამდე — დიზაინი, კოდი, responsive სტრუქტურა და გაშვება.",
+
+
+        service_1_title:
+            "Landing Page",
+
+        service_1_text:
+            "თანამედროვე ერთგვერდიანი საიტი პროდუქტის, სერვისის ან პირადი ბრენდისთვის.",
+
+
+        service_2_title:
+            "ბიზნეს ვებსაიტი",
+
+        service_2_text:
+            "პროფესიონალური საიტი კომპანიისთვის, მაღაზიისთვის ან მომსახურებისთვის.",
+
+
+        service_3_title:
+            "Online Store",
+
+        service_3_text:
+            "პროდუქციის კატალოგი, კალათა, შეკვეთის ფორმა და სხვა ფუნქციები.",
+
+
+        service_4_title:
+            "Multilingual",
+
+        service_4_text:
+            "რამდენიმე ენაზე მუშაობა ერთი ვებსაიტის ფარგლებში.",
+
+
+        service_5_title:
+            "Redesign",
+
+        service_5_text:
+            "ძველი საიტის ვიზუალური და ფუნქციური განახლება.",
+
+
+        service_6_title:
+            "Deployment",
+
+        service_6_text:
+            "GitHub Pages-ზე ან შესაბამის ჰოსტინგზე საიტის გაშვება.",
+
+
+        project_title:
+            "რეალური პროექტი.",
+
+        project_description:
+            "ერთ-ერთი ვებპროექტი, რომელიც STEPANYAN IT GROUP-ის მიერ არის შექმნილი.",
+
+        project_text:
+            "ონლაინ მაღაზიის ვებპროექტი ახალციხისთვის. საიტს აქვს პროდუქციის ძიება, კატეგორიები, კალათა, შეკვეთის ფუნქცია, რამდენიმე ენა და დამატებითი ფუნქციები.",
+
+        project_button:
+            "Live Project",
+
+
+        process_title:
+            "იდეიდან გაშვებამდე.",
+
+        process_description:
+            "მარტივი და გასაგები სამუშაო პროცესი.",
+
+        process_1:
+            "მოთხოვნა",
+
+        process_2:
+            "დიზაინი",
+
+        process_3:
+            "დეველოპმენტი",
+
+        process_4:
+            "ტესტირება",
+
+        process_5:
+            "გაშვება",
+
+
+        pricing_title:
+            "მარტივი და ხელმისაწვდომი ფასები.",
+
+        pricing_description:
+            "საბოლოო ფასი დამოკიდებულია პროექტის ფუნქციებსა და მოცულობაზე.",
+
+        popular:
+            "STARTER",
+
+
+        price_1_title:
+            "პატარა ვებსაიტი",
+
+        price_1_desc:
+            "მარტივი საიტი პირადი პროექტის, სერვისის ან მცირე ბიზნესისთვის.",
+
+
+        price_2_title:
+            "ვებგვერდის მომსახურება",
+
+        price_2_desc:
+            "უკვე შექმნილი ვებგვერდის საბაზისო ტექნიკური მხარდაჭერა.",
+
+
+        price_3_title:
+            "Custom Project",
+
+        price_3_desc:
+            "ონლაინ მაღაზია, რთული ფუნქციები, ინდივიდუალური დიზაინი და სხვა.",
+
+
+        choose:
+            "შეკვეთა",
+
+        support_button:
+            "მომსახურების დაწყება",
+
+        contact_us:
+            "დაგვიკავშირდი",
+
+
+        pricing_note:
+            "პირველი 3 თვის შემდეგ ვებგვერდის მომსახურება შეადგენს 10 ₾-ს თვეში.",
+
+
+        faq_title:
+            "ხშირად დასმული კითხვები.",
+
+
+        faq_1_q:
+            "გაქვთ ფიზიკური ოფისი?",
+
+        faq_1_a:
+            "STEPANYAN IT GROUP მუშაობს დისტანციურად. პროექტებზე მუშაობა ხდება ონლაინ.",
+
+
+        faq_2_q:
+            "რამდენი ღირს ვებსაიტი?",
+
+        faq_2_a:
+            "პატარა ვებსაიტის ფასი იწყება 10 ₾-დან. უფრო რთული პროექტებისთვის ფასი განისაზღვრება ფუნქციების მიხედვით.",
+
+
+        faq_3_q:
+            "რა ღირს ყოველთვიური მომსახურება?",
+
+        faq_3_a:
+            "პირველი 3 თვის განმავლობაში მომსახურება ღირს 5 ₾ თვეში. მეოთხე თვიდან — 10 ₾ თვეში.",
+
+
+        faq_4_q:
+            "შეგიძლიათ საიტი რამდენიმე ენაზე გააკეთოთ?",
+
+        faq_4_a:
+            "დიახ. პროექტის საჭიროებიდან გამომდინარე შესაძლებელია ქართული, ინგლისური, რუსული და სხვა ენების დამატება.",
+
+
+        faq_5_q:
+            "შეგიძლიათ ჩემი საიტის GitHub Pages-ზე გაშვება?",
+
+        faq_5_a:
+            "დიახ. სტატიკური ვებსაიტების შემთხვევაში შესაძლებელია GitHub Pages-ის გამოყენება.",
+
+
+        faq_6_q:
+            "შემიძლია კოდი ჩემთან მქონდეს?",
+
+        faq_6_a:
+            "დიახ. პროექტის წყარო შეიძლება გადმოგეცეთ ღია კოდის სახით, რათა შემდგომ თავადაც შეძლოთ მისი შეცვლა.",
+
+
+        contact_title:
+            "გაქვს იდეა? შევქმნათ.",
+
+        contact_description:
+            "მომწერე რა ტიპის ვებსაიტი გჭირდება, რა ფუნქციები უნდა ჰქონდეს და დაგიკავშირდები.",
+
+        form_name:
+            "სახელი",
+
+        form_service:
+            "რა გჭირდება?",
+
+        form_message:
+            "შეტყობინება",
+
+        form_button:
+            "შეტყობინების გაგზავნა",
+
+        form_note:
+            "ფორმა გახსნის თქვენს Email პროგრამას შეტყობინების გასაგზავნად.",
+
+
+        footer_text:
+            "Remote digital studio — თანამედროვე ვებსაიტები მცირე ბიზნესებისა და პირადი პროექტებისთვის.",
+
+        footer_services:
+            "სერვისები",
+
+        footer_company:
+            "ინფორმაცია"
+
+    },
+
+
+    en: {
+
+        nav_home: "Home",
+        nav_services: "Services",
+        nav_projects: "Projects",
+        nav_process: "Process",
+        nav_pricing: "Pricing",
+        nav_faq: "FAQ",
+        nav_contact: "Contact",
+        nav_cta: "Start Project",
+
+
+        hero_title_1:
+            "We build websites",
+
+        hero_title_2:
+            "that work.",
+
+        hero_description:
+            "STEPANYAN IT GROUP — a remote web development brand for small businesses and personal projects. Fast, responsive and multilingual websites.",
+
+        hero_projects:
+            "View Projects",
+
+        hero_contact:
+            "Contact Us",
+
+        hero_note:
+            "Small websites from 10 ₾",
+
+
+        trust_one:
+            "Responsive",
+
+        trust_two:
+            "Languages",
+
+        trust_three:
+            "Ready",
+
+        trust_four:
+            "Workflow",
+
+
+        services_title:
+            "Everything a modern website needs.",
+
+        services_description:
+            "From simple landing pages to functional web projects — design, code, responsive structure and launch.",
+
+
+        service_1_title:
+            "Landing Page",
+
+        service_1_text:
+            "A modern one-page website for a product, service or personal brand.",
+
+
+        service_2_title:
+            "Business Website",
+
+        service_2_text:
+            "A professional website for a company, store or service.",
+
+
+        service_3_title:
+            "Online Store",
+
+        service_3_text:
+            "Product catalog, cart, order forms and other features.",
+
+
+        service_4_title:
+            "Multilingual",
+
+        service_4_text:
+            "Multiple languages within one website.",
+
+
+        service_5_title:
+            "Redesign",
+
+        service_5_text:
+            "Visual and functional modernization of an existing website.",
+
+
+        service_6_title:
+            "Deployment",
+
+        service_6_text:
+            "Website deployment to GitHub Pages or suitable hosting.",
+
+
+        project_title:
+            "A real project.",
+
+        project_description:
+            "One of the web projects created by STEPANYAN IT GROUP.",
+
+        project_text:
+            "An online store website for Akhaltsikhe. It includes product search, categories, shopping cart, ordering, multiple languages and additional features.",
+
+        project_button:
+            "Live Project",
+
+
+        process_title:
+            "From idea to launch.",
+
+        process_description:
+            "A simple and transparent workflow.",
+
+        process_1:
+            "Brief",
+
+        process_2:
+            "Design",
+
+        process_3:
+            "Development",
+
+        process_4:
+            "Testing",
+
+        process_5:
+            "Launch",
+
+
+        pricing_title:
+            "Simple and accessible pricing.",
+
+        pricing_description:
+            "The final price depends on project features and scope.",
+
+        popular:
+            "STARTER",
+
+
+        price_1_title:
+            "Small Website",
+
+        price_1_desc:
+            "A simple website for a personal project, service or small business.",
+
+
+        price_2_title:
+            "Website Support",
+
+        price_2_desc:
+            "Basic technical support for an existing website.",
+
+
+        price_3_title:
+            "Custom Project",
+
+        price_3_desc:
+            "Online stores, complex features, custom design and more.",
+
+
+        choose:
+            "Order",
+
+        support_button:
+            "Start Support",
+
+        contact_us:
+            "Contact Us",
+
+
+        pricing_note:
+            "After the first 3 months, website support costs 10 ₾ per month.",
+
+
+        faq_title:
+            "Frequently asked questions.",
+
+
+        faq_1_q:
+            "Do you have a physical office?",
+
+        faq_1_a:
+            "STEPANYAN IT GROUP works remotely. Projects are handled online.",
+
+
+        faq_2_q:
+            "How much does a website cost?",
+
+        faq_2_a:
+            "Small websites start from 10 ₾. More complex projects are priced according to their features.",
+
+
+        faq_3_q:
+            "How much is monthly support?",
+
+        faq_3_a:
+            "Support costs 5 ₾ per month for the first 3 months. From the fourth month it is 10 ₾ per month.",
+
+
+        faq_4_q:
+            "Can you create multilingual websites?",
+
+        faq_4_a:
+            "Yes. Georgian, English, Russian and other languages can be added depending on the project.",
+
+
+        faq_5_q:
+            "Can you deploy my website to GitHub Pages?",
+
+        faq_5_a:
+            "Yes. GitHub Pages can be used for suitable static websites.",
+
+
+        faq_6_q:
+            "Can I have the source code?",
+
+        faq_6_a:
+            "Yes. The project source code can be provided so you can modify it yourself.",
+
+
+        contact_title:
+            "Have an idea? Let's build it.",
+
+        contact_description:
+            "Tell me what kind of website you need and what features you want.",
+
+        form_name:
+            "Name",
+
+        form_service:
+            "What do you need?",
+
+        form_message:
+            "Message",
+
+        form_button:
+            "Send Message",
+
+        form_note:
+            "The form will open your email application to send the message.",
+
+
+        footer_text:
+            "Remote digital studio — modern websites for small businesses and personal projects.",
+
+        footer_services:
+            "Services",
+
+        footer_company:
+            "Information"
+
+    },
+
+
+    ru: {
+
+        nav_home: "Главная",
+        nav_services: "Услуги",
+        nav_projects: "Проекты",
+        nav_process: "Процесс",
+        nav_pricing: "Цены",
+        nav_faq: "FAQ",
+        nav_contact: "Контакты",
+        nav_cta: "Начать",
+
+
+        hero_title_1:
+            "Создаём сайты",
+
+        hero_title_2:
+            "которые работают.",
+
+        hero_description:
+            "STEPANYAN IT GROUP — удалённый бренд веб-разработки для малого бизнеса и личных проектов. Быстрые, адаптивные и многоязычные сайты.",
+
+        hero_projects:
+            "Посмотреть проекты",
+
+        hero_contact:
+            "Связаться",
+
+        hero_note:
+            "Небольшие сайты от 10 ₾",
+
+
+        trust_one:
+            "Responsive",
+
+        trust_two:
+            "Языка",
+
+        trust_three:
+            "Ready",
+
+        trust_four:
+            "Workflow",
+
+
+        services_title:
+            "Всё необходимое для современного сайта.",
+
+        services_description:
+            "От простых лендингов до функциональных веб-проектов — дизайн, код, адаптивность и запуск.",
+
+
+        service_1_title:
+            "Landing Page",
+
+        service_1_text:
+            "Современный одностраничный сайт для продукта, услуги или личного бренда.",
+
+
+        service_2_title:
+            "Бизнес-сайт",
+
+        service_2_text:
+            "Профессиональный сайт для компании, магазина или услуги.",
+
+
+        service_3_title:
+            "Online Store",
+
+        service_3_text:
+            "Каталог товаров, корзина, форма заказа и другие функции.",
+
+
+        service_4_title:
+            "Multilingual",
+
+        service_4_text:
+            "Несколько языков в рамках одного сайта.",
+
+
+        service_5_title:
+            "Redesign",
+
+        service_5_text:
+            "Визуальное и функциональное обновление существующего сайта.",
+
+
+        service_6_title:
+            "Deployment",
+
+        service_6_text:
+            "Размещение сайта на GitHub Pages или подходящем хостинге.",
+
+
+        project_title:
+            "Реальный проект.",
+
+        project_description:
+            "Один из веб-проектов, созданных STEPANYAN IT GROUP.",
+
+        project_text:
+            "Онлайн-магазин для Ахалцихе. Сайт включает поиск товаров, категории, корзину, заказ, несколько языков и дополнительные функции.",
+
+        project_button:
+            "Открыть проект",
+
+
+        process_title:
+            "От идеи до запуска.",
+
+        process_description:
+            "Простой и понятный рабочий процесс.",
+
+        process_1:
+            "Задача",
+
+        process_2:
+            "Дизайн",
+
+        process_3:
+            "Разработка",
+
+        process_4:
+            "Тестирование",
+
+        process_5:
+            "Запуск",
+
+
+        pricing_title:
+            "Простые и доступные цены.",
+
+        pricing_description:
+            "Итоговая стоимость зависит от функций и объёма проекта.",
+
+        popular:
+            "STARTER",
+
+
+        price_1_title:
+            "Небольшой сайт",
+
+        price_1_desc:
+            "Простой сайт для личного проекта, услуги или малого бизнеса.",
+
+
+        price_2_title:
+            "Обслуживание сайта",
+
+        price_2_desc:
+            "Базовая техническая поддержка уже созданного сайта.",
+
+
+        price_3_title:
+            "Custom Project",
+
+        price_3_desc:
+            "Интернет-магазины, сложные функции, индивидуальный дизайн и другое.",
+
+
+        choose:
+            "Заказать",
+
+        support_button:
+            "Начать обслуживание",
+
+        contact_us:
+            "Связаться",
+
+
+        pricing_note:
+            "После первых 3 месяцев обслуживание сайта стоит 10 ₾ в месяц.",
+
+
+        faq_title:
+            "Часто задаваемые вопросы.",
+
+
+        faq_1_q:
+            "У вас есть физический офис?",
+
+        faq_1_a:
+            "STEPANYAN IT GROUP работает удалённо. Работа над проектами проходит онлайн.",
+
+
+        faq_2_q:
+            "Сколько стоит сайт?",
+
+        faq_2_a:
+            "Стоимость небольшого сайта начинается от 10 ₾. Более сложные проекты рассчитываются по функциям.",
+
+
+        faq_3_q:
+            "Сколько стоит ежемесячное обслуживание?",
+
+        faq_3_a:
+            "Первые 3 месяца обслуживание стоит 5 ₾ в месяц. С четвёртого месяца — 10 ₾ в месяц.",
+
+
+        faq_4_q:
+            "Можете сделать сайт на нескольких языках?",
+
+        faq_4_a:
+            "Да. В зависимости от проекта можно добавить грузинский, английский, русский и другие языки.",
+
+
+        faq_5_q:
+            "Можете разместить сайт на GitHub Pages?",
+
+        faq_5_a:
+            "Да. GitHub Pages подходит для соответствующих статических сайтов.",
+
+
+        faq_6_q:
+            "Могу ли я получить исходный код?",
+
+        faq_6_a:
+            "Да. Исходный код проекта может быть передан вам для дальнейшего редактирования.",
+
+
+        contact_title:
+            "Есть идея? Создадим.",
+
+        contact_description:
+            "Напишите, какой сайт вам нужен и какие функции должны быть.",
+
+        form_name:
+            "Имя",
+
+        form_service:
+            "Что вам нужно?",
+
+        form_message:
+            "Сообщение",
+
+        form_button:
+            "Отправить сообщение",
+
+        form_note:
+            "Форма откроет вашу почтовую программу для отправки сообщения.",
+
+
+        footer_text:
+            "Удалённая digital studio — современные сайты для малого бизнеса и личных проектов.",
+
+        footer_services:
+            "Услуги",
+
+        footer_company:
+            "Информация"
+
+    }
+
 };
 
-const lang = document.getElementById("language");
-const themeBtn = document.getElementById("themeBtn");
-const mobileMenu = document.getElementById("mobileMenu");
-const menuBtn = document.getElementById("menuBtn");
-const toast = document.getElementById("toast");
 
-function applyLanguage(code){
-  const t = translations[code] || translations.ka;
-  document.documentElement.lang = code;
-  document.querySelectorAll("[data-i18n]").forEach(el=>{
-    const key = el.dataset.i18n;
-    if(t[key] !== undefined) el.innerHTML = t[key];
-  });
-  localStorage.setItem("siteLanguage", code);
+
+/* =====================================================
+   LANGUAGE SWITCH
+===================================================== */
+
+const langButtons =
+    document.querySelectorAll(".lang-btn");
+
+
+function changeLanguage(lang) {
+
+    if (!translations[lang]) return;
+
+
+    document
+        .querySelectorAll("[data-i18n]")
+        .forEach(element => {
+
+            const key =
+                element.getAttribute("data-i18n");
+
+            if (translations[lang][key]) {
+
+                element.textContent =
+                    translations[lang][key];
+
+            }
+
+        });
+
+
+    langButtons.forEach(button => {
+
+        button.classList.toggle(
+            "active",
+            button.dataset.lang === lang
+        );
+
+    });
+
+
+    document.documentElement
+        .setAttribute("lang", lang);
+
+
+    localStorage.setItem(
+        "stepanyan-language",
+        lang
+    );
+
 }
-lang.value = localStorage.getItem("siteLanguage") || "ka";
-applyLanguage(lang.value);
-lang.addEventListener("change", e => applyLanguage(e.target.value));
 
-const savedTheme = localStorage.getItem("siteTheme");
-if(savedTheme === "light") document.body.classList.add("light");
-function updateThemeIcon(){ themeBtn.textContent = document.body.classList.contains("light") ? "☀" : "☾"; }
-updateThemeIcon();
-themeBtn.addEventListener("click", ()=>{
-  document.body.classList.toggle("light");
-  localStorage.setItem("siteTheme", document.body.classList.contains("light") ? "light" : "dark");
-  updateThemeIcon();
+
+langButtons.forEach(button => {
+
+    button.addEventListener("click", () => {
+
+        changeLanguage(
+            button.dataset.lang
+        );
+
+    });
+
 });
 
-menuBtn.addEventListener("click", ()=>{
-  mobileMenu.classList.toggle("open");
-  menuBtn.textContent = mobileMenu.classList.contains("open") ? "×" : "☰";
+
+const savedLanguage =
+    localStorage.getItem(
+        "stepanyan-language"
+    );
+
+
+if (savedLanguage) {
+
+    changeLanguage(savedLanguage);
+
+}
+
+
+
+/* =====================================================
+   CONTACT FORM
+===================================================== */
+
+const contactForm =
+    document.getElementById("contactForm");
+
+
+contactForm.addEventListener("submit", event => {
+
+    event.preventDefault();
+
+
+    const name =
+        document.getElementById("name").value.trim();
+
+    const email =
+        document.getElementById("email").value.trim();
+
+    const service =
+        document.getElementById("service").value;
+
+    const message =
+        document.getElementById("message").value.trim();
+
+
+    /*
+       IMPORTANT:
+       შეცვალე ეს Email შენი რეალური Email-ით.
+    */
+
+    const recipient =
+        "YOUR_EMAIL@example.com";
+
+
+    const subject =
+        encodeURIComponent(
+            "STEPANYAN IT GROUP — New Project Request"
+        );
+
+
+    const body =
+        encodeURIComponent(
+
+            `Name: ${name}
+
+Email: ${email}
+
+Service: ${service}
+
+Message:
+
+${message}
+
+--------------------------------
+STEPANYAN IT GROUP
+`
+        );
+
+
+    window.location.href =
+        `mailto:${recipient}?subject=${subject}&body=${body}`;
+
 });
-document.querySelectorAll(".mobile-menu a").forEach(a=>a.addEventListener("click",()=>{
-  mobileMenu.classList.remove("open"); menuBtn.textContent="☰";
-}));
 
-document.getElementById("year").textContent = new Date().getFullYear();
 
-document.getElementById("contactForm").addEventListener("submit", e=>{
-  e.preventDefault();
-  const name = document.getElementById("name").value.trim();
-  const type = document.getElementById("type").value;
-  const message = document.getElementById("message").value.trim();
-  const text = `გამარჯობა, STEPANYAN IT GROUP.%0A%0Aსახელი: ${encodeURIComponent(name)}%0Aსაიტის ტიპი: ${encodeURIComponent(type)}%0Aაღწერა: ${encodeURIComponent(message)}`;
-  window.open(`https://wa.me/995500224822?text=${text}`, "_blank", "noopener,noreferrer");
-  toast.textContent = "WhatsApp იხსნება...";
-  toast.classList.add("show");
-  setTimeout(()=>toast.classList.remove("show"),2200);
+
+/* =====================================================
+   ESCAPE KEY — CLOSE MOBILE MENU
+===================================================== */
+
+document.addEventListener("keydown", event => {
+
+    if (event.key === "Escape") {
+
+        mobileMenu.classList.remove("open");
+
+        document.body.classList.remove("no-scroll");
+
+    }
+
 });
